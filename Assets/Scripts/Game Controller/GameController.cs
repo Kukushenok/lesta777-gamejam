@@ -8,7 +8,6 @@ public class GameController : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
     }
 
     public void Menu()
@@ -21,9 +20,9 @@ public class GameController : MonoBehaviour
         Debug.Log("Battle");
     }
 
-    public void CompleteLevel()
+    public void SkillSelection()
     {
-        Debug.Log("CompleteLevel");
+        Debug.Log("SkillSelection");
     }
 
     public void GameOver()

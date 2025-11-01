@@ -10,10 +10,9 @@ public class LevelManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
     }
 
-    public void LoadScene(int index)
+    public void LoadSceneByIndex(int index)
     {
         if (IsSceneValid(index))
         {
