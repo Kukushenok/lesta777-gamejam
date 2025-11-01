@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5320728a0a1de9b49b404f0998709cbf, type: 3}
   m_Name: PerspectiveSettings
   m_EditorClassIdentifier: Assembly-CSharp::PerspectiveSettingsSO
-  <IsometricRatio>k__BackingField: 0.7
+  <IsometricRatio>k__BackingField: 0.5
