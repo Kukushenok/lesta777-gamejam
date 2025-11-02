@@ -33,12 +33,13 @@ public class DebuffManager : MonoBehaviour
 
             var button = buttonObj.GetComponent<Button>();
             button.onClick.RemoveAllListeners();
-            button.onClick.AddListener(() => { GetDebuffButtonValue(); });
+            int closure = i;
+            button.onClick.AddListener(() => { GetDebuffButtonValue(closure); });
         }
     }
 
-    private void GetDebuffButtonValue(DebuffSO debuff)
+    private void GetDebuffButtonValue(int idx)
     {
-        Debug.Log(debuff.Name);
+       
     }
 }

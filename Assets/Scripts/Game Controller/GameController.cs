@@ -1,30 +1,167 @@
-using Assets.Scripts.Systems;
+using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-
+public enum GameState
+{
+    MainMenu,
+    Gameplay,
+    Pause,
+    WinScreen,
+    LostScreen,
+    ChoosePerk
+}
+public class ProgressData
+{
+    public readonly DebuffFetcher debuffFetcher;
+    public int levelIndex { get; private set; } = 0;
+    private List<DebuffSO> currDebuffs;
+    public ProgressData(DebuffFetcher debuffFetcher)
+    {
+        this.debuffFetcher = debuffFetcher;
+    }
+    public void Advance()
+    {
+        levelIndex++;
+    }
+    public List<IDebuffDescription> GetNewChoices(int n = 3)
+    {
+        currDebuffs = debuffFetcher.GetDebuffs(n);
+        return (from s in currDebuffs select (IDebuffDescription)s).ToList();
+    }
+    public IDebuff DoChoice(int idx)
+    {
+        if (currDebuffs == null) throw new System.Exception("broken flow sorry");
+        var result = currDebuffs[idx];
+        debuffFetcher.OnDebuffSelected(result);
+        currDebuffs = null;
+        return result;
+    }
+}
 public class GameController : Singleton<GameController>
 {
-    public void Menu()
-    {
-        Debug.Log("Menu");
-    }
+    [SerializeField] private DebuffRepositorySO repositorySO;
+    [SerializeField] private float pauseTime = 0.1f;
+    [SerializeField] private float perkChooseTime = 1.0f;
+    private TimeAnimator timeAnimator = new TimeAnimator(1.0f);
+    private ProgressData progressData;
+    public GameState State { get; private set; } = GameState.MainMenu;
 
-    public void Battle()
+    private void Start()
     {
-        Debug.Log("Battle");
+        StartCoroutine(timeAnimator.Cycle());
     }
-
-    public void SkillSelection()
+    public void ToGameplay()
     {
-        Debug.Log("SkillSelection");
+        if(State == GameState.MainMenu)
+        {
+            progressData = new ProgressData(repositorySO.GetFetcher());
+            LevelManager.Instance.ToGameplay(progressData.levelIndex);
+            State = GameState.Gameplay;
+        } 
+        else if(State == GameState.LostScreen)
+        {
+            LevelManager.Instance.ToGameplay(progressData.levelIndex);
+            State = GameState.Gameplay;
+        }
+        else
+        {
+            Debug.LogWarning("Can't transition from state " + State);
+        }
     }
-
     public void GameOver()
     {
-        Debug.Log("GameOver");
+        if (State == GameState.Gameplay && !LevelManager.Instance.Transition)
+        {
+            State = GameState.LostScreen;
+            LevelManager.Instance.ToResults();
+        }
+        else
+        {
+            Debug.LogWarning("Can't transition from state " + State);
+        }
     }
-
-    public void Victory()
+    public void Advance()
     {
-        Debug.Log("Victory");
+        if(State == GameState.Gameplay && !LevelManager.Instance.Transition)
+        {
+            progressData.Advance();
+            if(LevelManager.Instance.LevelCount <= progressData.levelIndex)
+            {
+                State = GameState.WinScreen;
+                LevelManager.Instance.ToResults();
+            } 
+            else
+            {
+                LevelManager.Instance.ToGameplay(progressData.levelIndex);
+            }
+        }
     }
+    public void DoPause()
+    {
+        if (State == GameState.Gameplay && !LevelManager.Instance.Transition)
+        {
+            State = GameState.Pause;
+            timeAnimator.SetTime(0, pauseTime);
+            PauseCanvasManager.Instance.Pause();
+        }
+        else
+        {
+            Debug.LogWarning("Can't transition from state " + State);
+        }
+    }
+    public void Resume()
+    {
+        if(State == GameState.Pause)
+        {
+            State = GameState.Gameplay;
+            PauseCanvasManager.Instance.Resume();
+            timeAnimator.SetTime(1, pauseTime);
+        }
+        else
+        {
+            Debug.LogWarning("Can't transition from state " + State);
+        }
+    }
+    public void DarknessConsumed()
+    {
+        if(State == GameState.Gameplay)
+        {
+            State = GameState.ChoosePerk;
+            timeAnimator.SetTime(0, perkChooseTime);
+        }
+        else
+        {
+            Debug.LogWarning("Can't transition from state " + State);
+        }
+    }
+    public void ToMenu()
+    {
+        if(State == GameState.LostScreen || State == GameState.WinScreen)
+        {
+            State = GameState.MainMenu;
+            LevelManager.Instance.ToMenu();
+        }
+        if(State == GameState.Pause)
+        {
+            State = GameState.MainMenu;
+            PauseCanvasManager.Instance.Resume();
+            timeAnimator.SetTime(1, pauseTime);
+            LevelManager.Instance.ToMenu();
+        }
+        else
+        {
+            Debug.LogWarning("Can't transition from state " + State);
+        }
+    }
+    public void ApplyPerk(int idx)
+    {
+        if(State == GameState.ChoosePerk)
+        {
+            State = GameState.Gameplay;
+            var perk = progressData.DoChoice(idx);
+            timeAnimator.SetTime(1, perkChooseTime);
+        }
+    }
+    
 }
