@@ -18,7 +18,11 @@ public class Melee : AttackObject
 
         if (direction.y < 0) angleOfAttack *= -1; 
 
-        SpriteRenderer spriteRenderer = parent.GetComponent<AttackerBrain>().MyRenderer;
+        SpriteRenderer spriteRenderer = parent.GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = parent.GetComponentInChildren<SpriteRenderer>();
+        }
         var bounds = spriteRenderer.bounds.size/2f;
         var center = spriteRenderer.bounds.center;
 
