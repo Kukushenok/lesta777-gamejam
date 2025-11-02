@@ -1,6 +1,6 @@
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
-public class MovementAgent : MonoBehaviour
+public class MovementAgent : MonoBehaviour, ISpeedDebuffable
 {
     [SerializeField] private MovementBrain _movementBrain;
     [SerializeField] private PerspectiveSettingsSO _perspectiveSettings;
@@ -12,6 +12,7 @@ public class MovementAgent : MonoBehaviour
     {
         _rg = GetComponent<Rigidbody2D>();
         _rg.gravityScale = 0;
+        _rg.freezeRotation = true;
     }
     private void Update()
     {
@@ -23,5 +24,10 @@ public class MovementAgent : MonoBehaviour
     private void FixedUpdate()
     {
         _rg.linearVelocity = Vector2.Lerp(_rg.linearVelocity, _targetVelocity, 1 - Mathf.Exp(-Time.fixedDeltaTime * _damp));
+    }
+
+    public void DebuffSpeed(float modifier)
+    {
+        _speed *= modifier;
     }
 }
