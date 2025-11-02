@@ -371,7 +371,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89033cd0ea15de242b83d8bd0c361d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attacking
-  attackObjectPrefab: {fileID: 5829796879884812356, guid: 858c7f0ecd6edc94daad19ea1ab171f7, type: 3}
+  damage: 1
+  speed: 0
+  expirationTime: 0.2
+  OnAttack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2045511777}
+        m_TargetAssemblyTypeName: AttackeListener, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  debugID: 1
+  attackObjectPrefabs:
+  - {fileID: 5829796879884812356, guid: 858c7f0ecd6edc94daad19ea1ab171f7, type: 3}
+  - {fileID: 4349773036987990266, guid: 2235d3434af6eb8468db12b705f0306e, type: 3}
 --- !u!1 &1140233926
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +705,7 @@ GameObject:
   - component: {fileID: 1653252231}
   m_Layer: 0
   m_Name: PlayerDummy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -876,6 +897,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a53cb2a51d56834ab1b9d8d9ff855c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2045511777}
+        m_TargetAssemblyTypeName: AttackeListener, Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  maxHealth: 15
+  debugHealth: 20
 --- !u!1 &1667303873
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,8 +998,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 632677082}
-        m_TargetAssemblyTypeName: Attacking, Assembly-CSharp
-        m_MethodName: Attack
+        m_TargetAssemblyTypeName: Attacker, Assembly-CSharp
+        m_MethodName: DebugFunction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1009,6 +1047,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667303873}
   m_CullTransparentMesh: 1
+--- !u!1 &2045511776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045511778}
+  - component: {fileID: 2045511777}
+  m_Layer: 0
+  m_Name: AttackEventListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2045511777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045511776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2ce27f73f673346ba82ac375cb3379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackeListener
+--- !u!4 &2045511778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045511776}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.8544, y: -1.4075, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1018,3 +1100,4 @@ SceneRoots:
   - {fileID: 632677081}
   - {fileID: 534695020}
   - {fileID: 1418957717}
+  - {fileID: 2045511778}

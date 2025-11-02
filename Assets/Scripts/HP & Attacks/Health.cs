@@ -1,8 +1,18 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Health: MonoBehaviour
 {
-    public abstract float health { get; }
+    [SerializeField] protected UnityEvent OnDeath;
+    [SerializeField] protected float maxHealth;
+    protected float _health;
 
-    public abstract bool TakeDamage(float damage);
+    public float health
+    {
+        get => _health;
+        protected set => _health = value;
+    }
+
+    public abstract void TakeDamage(float damage);
+    public abstract void Heal(float hp);
 }

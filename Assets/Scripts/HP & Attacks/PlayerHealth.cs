@@ -2,11 +2,26 @@ using UnityEngine;
 
 public class PlayerHealth : Health
 {
-    public override float health => throw new System.NotImplementedException();
+    [SerializeField]float debugHealth;
 
-    public override bool TakeDamage(float damage)
+    private void Awake()
     {
-        Debug.Log("получил пиздов");
-        return false;
+        health = debugHealth;
+    }
+
+    public override void Heal(float hp)
+    {
+        health += hp;
+        health = Mathf.Min(health, maxHealth);
+    }
+
+    public override void TakeDamage(float damage)
+    {
+        Debug.Log($"получил {damage} пиздов, осталось: {health}");
+        health -= damage;
+        if (health <= 0)
+        {
+            OnDeath?.Invoke();
+        }
     }
 }
