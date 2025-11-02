@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class PlayerHealth : Health
+public class EnemyHealth : Health
 {
     public override void Heal(float hp)
     {
-        health += hp;
-        health = Mathf.Min(health, maxHealth);
+        throw new System.NotImplementedException();
     }
 
     public override void TakeDamage(float damage)
     {
-        //Debug.Log($"получил {damage} пиздов, осталось: {health}");
         health -= damage;
         if (health <= 0)
         {

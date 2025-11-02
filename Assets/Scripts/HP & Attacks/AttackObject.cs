@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class AttackObject : MonoBehaviour
 {
+    [SerializeField] UnityEvent OnAttackExpired;
     protected Vector2 direction;
     protected GameObject parent;
     protected float damage;
@@ -24,8 +27,16 @@ public abstract class AttackObject : MonoBehaviour
         if (expirationTime <= 0.0f)
         {
             timerEnded = true;
+            AttackExpiration();
         }
 
+    }
+
+    protected void AttackExpiration()
+    {
+        OnAttackExpired?.Invoke();
+        StopCoroutine(Move());
+        Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,7 +45,8 @@ public abstract class AttackObject : MonoBehaviour
 
         if (parent.tag!=gameObject.tag)
         {
-            gameObject.GetComponent<Health>().TakeDamage(damage);
+            var health = gameObject.GetComponent<Health>();
+            health?.TakeDamage(damage);
             hasHitSomething = true;
         }
     }

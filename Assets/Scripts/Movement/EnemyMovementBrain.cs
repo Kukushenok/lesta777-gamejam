@@ -15,9 +15,11 @@ public class EnemyMovementBrain : MovementBrain
     private Transform _target;
     private float _currentDetectionTime; 
     private Vector2 _currMoveVector;
+    private EnemyAttackerBrain _attackerBrain;
     private void Awake()
     {
         _target = FindFirstObjectByType<PlayerMovementBrain>().transform;
+        _attackerBrain = GetComponent<EnemyAttackerBrain>();
     }
     public void ForceDetect()
     {
@@ -70,8 +72,11 @@ public class EnemyMovementBrain : MovementBrain
         else
         {
             _currMoveVector = Vector2.zero;
+            if (!_attackerBrain.isEnabled) _attackerBrain.Enable(0, _target.transform.position - transform.position);
+            else _attackerBrain.UpdateDirection(_target.transform.position - transform.position);
             if (delta.magnitude > _attackRadius)
             {
+                _attackerBrain.Disable();
                 _currState = State.Aggro;
             }
         }

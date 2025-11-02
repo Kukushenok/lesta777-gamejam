@@ -20,6 +20,6 @@ public class Projectile : AttackObject
         {
             yield return transform.position += newPosition;
         }
-        Destroy(this.gameObject);
+        AttackExpiration();
     }
 }
