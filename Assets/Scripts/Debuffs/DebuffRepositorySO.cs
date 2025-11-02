@@ -5,5 +5,5 @@ using UnityEngine;
 public class DebuffRepositorySO: ScriptableObject
 {
     [SerializeField] private List<DebuffSO> debuffs;
-    public DebuffFetcher GetFetcher() => new DebuffFetcher(debuffs);
+    public DebuffFetcher GetFetcher() => new DebuffFetcher(new List<DebuffSO>(debuffs));
 }
