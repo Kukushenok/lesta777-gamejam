@@ -1,6 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class PauseManager : MonoBehaviour
+public class PauseManager : Singleton<PauseManager>
 {
     [SerializeField] private GameObject _settingsButton;
 

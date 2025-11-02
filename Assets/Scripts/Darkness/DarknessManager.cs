@@ -12,6 +12,7 @@ public class DarknessManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     public float Darkness

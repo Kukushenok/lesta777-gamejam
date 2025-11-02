@@ -1,5 +1,9 @@
-﻿public interface IDebuffDescription
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+public interface IDebuffDescription
 {
     public string Name { get; }
     public string Description { get; }
+    public Sprite Sprite { get; }
 }

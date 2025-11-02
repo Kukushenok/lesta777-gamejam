@@ -1,17 +1,10 @@
+using Assets.Scripts.Systems;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : Singleton<LevelManager>
 {
-    public static LevelManager Instance;
-
-    private void Awake()
-    {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
-    }
-
     public void LoadSceneByIndex(int index)
     {
         if (IsSceneValid(index))
