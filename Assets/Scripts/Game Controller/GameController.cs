@@ -1,21 +1,12 @@
 using UnityEngine;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 
 public class GameController : MonoBehaviour
 {
-    private IState _currentState;
+    private GameState _currentGameState;
 
-    private MenuState _menuState = new();
-
-    private BattleState _battleState = new();
-
-    private GameOverState _gameOverState = new();
-
-    private PauseState _pauseState = new();
-
-    private SkillSelectionState _skillSelectionState = new();
-
-    private VictoryState _victoryState = new();
+    private List<IOnGameStateChange> events = new();
 
     public static GameController Instance;
 
@@ -23,24 +14,16 @@ public class GameController : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
-    private async UniTask ChangeStateAsync(IState newState)
+    public void ChangeGameState(GameState newState)
     {
-        if (_currentState != null) await _currentState.OnExit();
-        _currentState = newState;
-        await _currentState.OnEnterAsync();
+        _currentGameState = newState;
+        UniTask.WhenAll(from s in events select s.GameStateChanged(_currentGameState));
     }
 
-    public void Menu() => ChangeStateAsync(_menuState).Forget();
+    public void AddCallback(IOnGameStateChange ev) => events.Add(ev);
 
-    public void Battle() => ChangeStateAsync(_battleState).Forget();
-
-    public void GameOver() => ChangeStateAsync(_gameOverState).Forget();
-
-    public void Pause() => ChangeStateAsync(_pauseState).Forget();
-
-    public void SkillSelection() => ChangeStateAsync(_skillSelectionState).Forget();
-
-    public void Victory() => ChangeStateAsync(_victoryState).Forget();
+    public void RemoveCallback(IOnGameStateChange ev) => events.Remove(ev);
 }
