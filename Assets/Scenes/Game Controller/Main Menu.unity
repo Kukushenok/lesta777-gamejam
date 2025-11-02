@@ -8848,7 +8848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68585be872b86344a09a67f26bfd884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DarknessManager
-  _darknessLimit: 5
+  _darknessLevel: 5
 --- !u!4 &1535616697
 Transform:
   m_ObjectHideFlags: 0

@@ -9,7 +9,11 @@ public class DebuffFetcher: IDebuff
     {
         _lastedDebuffs = debuffs;
     } 
-
+    private DebuffFetcher(List<DebuffSO> lasted, List<DebuffSO> applied)
+    {
+        _lastedDebuffs = lasted;
+        _appliedDebuffs = applied;
+    }
     public void ApplyDebuff(GameObject player)
     {
         foreach(var x  in _appliedDebuffs)
@@ -34,4 +38,5 @@ public class DebuffFetcher: IDebuff
         _lastedDebuffs.Remove(debuff); // todo maybe check if it is not in _lastedDebuffs
         _appliedDebuffs.Add(debuff);
     }
+    public DebuffFetcher Clone() => new DebuffFetcher(new List<DebuffSO>(_lastedDebuffs), new List<DebuffSO>(_appliedDebuffs));
 }

@@ -15,10 +15,14 @@ public class ProgressData
 {
     public readonly DebuffFetcher debuffFetcher;
     public int levelIndex { get; private set; } = 0;
-    private List<DebuffSO> currDebuffs;
+    private List<DebuffSO> currFetchedDebuffs = null;
     public ProgressData(DebuffFetcher debuffFetcher)
     {
         this.debuffFetcher = debuffFetcher;
+    }
+    private ProgressData(DebuffFetcher fetcher, int levelIdx): this(fetcher)
+    {
+        levelIndex = levelIdx;
     }
     public void Advance()
     {
@@ -26,17 +30,18 @@ public class ProgressData
     }
     public List<IDebuffDescription> GetNewChoices(int n = 3)
     {
-        currDebuffs = debuffFetcher.GetDebuffs(n);
-        return (from s in currDebuffs select (IDebuffDescription)s).ToList();
+        currFetchedDebuffs = debuffFetcher.GetDebuffs(n);
+        return (from s in currFetchedDebuffs select (IDebuffDescription)s).ToList();
     }
     public IDebuff DoChoice(int idx)
     {
-        if (currDebuffs == null) throw new System.Exception("broken flow sorry");
-        var result = currDebuffs[idx];
+        if (currFetchedDebuffs == null) throw new System.Exception("broken flow sorry");
+        var result = currFetchedDebuffs[idx];
         debuffFetcher.OnDebuffSelected(result);
-        currDebuffs = null;
+        currFetchedDebuffs = null;
         return result;
     }
+    public ProgressData Save() => new ProgressData(debuffFetcher.Clone(), levelIndex);
 }
 public class GameController : Singleton<GameController>
 {
@@ -45,6 +50,7 @@ public class GameController : Singleton<GameController>
     [SerializeField] private float perkChooseTime = 1.0f;
     private TimeAnimator timeAnimator = new TimeAnimator(1.0f);
     private ProgressData progressData;
+    private ProgressData lastSavedProgressData;
     public GameState State { get; private set; } = GameState.MainMenu;
     public IDebuff SpawnDebuff => progressData.debuffFetcher;
 
@@ -57,13 +63,15 @@ public class GameController : Singleton<GameController>
         if(State == GameState.MainMenu)
         {
             progressData = new ProgressData(repositorySO.GetFetcher());
-            DarknessManager.Instance.Darkness = 0;
+            DarknessManager.Instance.ResetDarkness(true);
             LevelManager.Instance.ToGameplay(progressData.levelIndex);
             State = GameState.Gameplay;
         } 
         else if(State == GameState.LostScreen)
         {
+            progressData = lastSavedProgressData.Save();
             LevelManager.Instance.ToGameplay(progressData.levelIndex);
+            DarknessManager.Instance.ResetDarkness(false);
             State = GameState.Gameplay;
         }
         else
@@ -97,6 +105,7 @@ public class GameController : Singleton<GameController>
             {
                 LevelManager.Instance.ToGameplay(progressData.levelIndex);
             }
+            lastSavedProgressData = progressData.Save();
         }
     }
     public void DoPause()
