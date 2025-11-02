@@ -1,20 +1,9 @@
 using UnityEngine;
 
-public class DarknessManager : MonoBehaviour
+public class DarknessManager : Singleton<DarknessManager>
 {
     [SerializeField] private float _darknessLimit;
-
-    private float _darkness;
-
-    public static DarknessManager Instance;
-
-    private void Awake()
-    {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
-    }
-
+    float _darkness;
     public float Darkness
     {
         get => _darkness;
@@ -28,6 +17,7 @@ public class DarknessManager : MonoBehaviour
 
     private void DarknessLimit()
     {
-        Debug.Log("darkness reached limit");
+        GameController.Instance.DarknessConsumed();
+        _darkness = 0;
     }
 }

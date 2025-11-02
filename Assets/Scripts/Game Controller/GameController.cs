@@ -46,6 +46,7 @@ public class GameController : Singleton<GameController>
     private TimeAnimator timeAnimator = new TimeAnimator(1.0f);
     private ProgressData progressData;
     public GameState State { get; private set; } = GameState.MainMenu;
+    public IDebuff SpawnDebuff => progressData.debuffFetcher;
 
     private void Start()
     {
@@ -56,6 +57,7 @@ public class GameController : Singleton<GameController>
         if(State == GameState.MainMenu)
         {
             progressData = new ProgressData(repositorySO.GetFetcher());
+            DarknessManager.Instance.Darkness = 0;
             LevelManager.Instance.ToGameplay(progressData.levelIndex);
             State = GameState.Gameplay;
         } 
@@ -123,18 +125,7 @@ public class GameController : Singleton<GameController>
             Debug.LogWarning("Can't transition from state " + State);
         }
     }
-    public void DarknessConsumed()
-    {
-        if(State == GameState.Gameplay)
-        {
-            State = GameState.ChoosePerk;
-            timeAnimator.SetTime(0, perkChooseTime);
-        }
-        else
-        {
-            Debug.LogWarning("Can't transition from state " + State);
-        }
-    }
+
     public void ToMenu()
     {
         if(State == GameState.LostScreen || State == GameState.WinScreen)
@@ -154,12 +145,26 @@ public class GameController : Singleton<GameController>
             Debug.LogWarning("Can't transition from state " + State);
         }
     }
+    public void DarknessConsumed()
+    {
+        if (State == GameState.Gameplay)
+        {
+            State = GameState.ChoosePerk;
+            FindFirstObjectByType<DebuffManager>().SetDebuffUI(progressData.GetNewChoices());
+            timeAnimator.SetTime(0, perkChooseTime);
+        }
+        else
+        {
+            Debug.LogWarning("Can't transition from state " + State);
+        }
+    }
     public void ApplyPerk(int idx)
     {
         if(State == GameState.ChoosePerk)
         {
             State = GameState.Gameplay;
             var perk = progressData.DoChoice(idx);
+            perk.ApplyDebuff(FindFirstObjectByType<PlayerDebuffManager>().gameObject);
             timeAnimator.SetTime(1, perkChooseTime);
         }
     }
