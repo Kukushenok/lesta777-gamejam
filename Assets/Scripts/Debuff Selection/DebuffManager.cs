@@ -58,6 +58,7 @@ public class DebuffManager : MonoBehaviour
     }
     private IEnumerator WaitAndQuit(int idx)
     {
+        OnDebuffSelected?.Invoke();
         yield return new WaitForSecondsRealtime(destroyTime);
         windowParent.SetActive(false);
         GameController.Instance.ApplyPerk(idx);
