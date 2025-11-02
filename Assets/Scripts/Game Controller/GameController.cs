@@ -168,5 +168,15 @@ public class GameController : Singleton<GameController>
             timeAnimator.SetTime(1, perkChooseTime);
         }
     }
+    public void Quit()
+    {
+        if(State == GameState.MainMenu)
+        {
+#if !UNITY_WEBGL
+            Application.Quit();
+            Debug.Log("APPLICATION QUIT INVOKED");
+#endif
+        }
+    }
     
 }

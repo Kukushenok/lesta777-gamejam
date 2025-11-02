@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: 819306a80e7203c45a7d98354954ac43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4094147417031743848
+    second: PerksChoices_0
+  - first:
+      213: -4486098433445045923
+    second: PerksChoices_1
+  - first:
+      213: -4875392573466180024
+    second: PerksChoices_2
+  - first:
+      213: -8009966166165311538
+    second: PerksChoices_3
+  - first:
+      213: 1402941062978967597
+    second: PerksChoices_4
+  - first:
+      213: 714609773108794958
+    second: PerksChoices_5
+  - first:
+      213: 7205539312533625201
+    second: PerksChoices_6
+  - first:
+      213: -8292669252361921143
+    second: PerksChoices_7
+  - first:
+      213: -1268107234664068153
+    second: PerksChoices_8
+  - first:
+      213: -4911563179545400260
+    second: PerksChoices_9
+  - first:
+      213: -6927625298070667350
+    second: PerksChoices_10
+  - first:
+      213: -6948696468138735762
+    second: PerksChoices_11
+  - first:
+      213: -3497176507700533787
+    second: PerksChoices_12
+  - first:
+      213: 1109284924991528583
+    second: PerksChoices_13
+  - first:
+      213: -3271600038425828585
+    second: PerksChoices_14
+  - first:
+      213: 8720075955581044856
+    second: PerksChoices_15
+  - first:
+      213: -1932483052594610332
+    second: PerksChoices_16
+  - first:
+      213: 6657883739306097166
+    second: PerksChoices_17
+  - first:
+      213: 6459287025954527014
+    second: PerksChoices_18
+  - first:
+      213: -5775128481393990656
+    second: PerksChoices_19
+  - first:
+      213: -4627824360017593544
+    second: PerksChoices_20
+  - first:
+      213: -2102201901706985038
+    second: PerksChoices_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PerksChoices_0
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 2007
+        width: 402
+        height: 1042
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8966dbdad9aae27c0800000000000000
+      internalID: -4094147417031743848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_1
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 2068
+        width: 716
+        height: 913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59521f3e3d2eb1c0800000000000000
+      internalID: -4486098433445045923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_2
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 2490
+        width: 365
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84688fd0940275cb0800000000000000
+      internalID: -4875392573466180024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_3
+      rect:
+        serializedVersion: 2
+        x: 3151
+        y: 2613
+        width: 258
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfa1d2e532e6d090800000000000000
+      internalID: -8009966166165311538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_4
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 2490
+        width: 364
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d289ba3b67f387310800000000000000
+      internalID: 1402941062978967597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_5
+      rect:
+        serializedVersion: 2
+        x: 4283
+        y: 2116
+        width: 644
+        height: 811
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e461c2f6dcdcae900800000000000000
+      internalID: 714609773108794958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_6
+      rect:
+        serializedVersion: 2
+        x: 5677
+        y: 2291
+        width: 300
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 179dda204d73ff360800000000000000
+      internalID: 7205539312533625201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_7
+      rect:
+        serializedVersion: 2
+        x: 5732
+        y: 2771
+        width: 130
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98dd92d50458aec80800000000000000
+      internalID: -8292669252361921143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_8
+      rect:
+        serializedVersion: 2
+        x: 6039
+        y: 2255
+        width: 299
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cbceb45037c66ee0800000000000000
+      internalID: -1268107234664068153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_9
+      rect:
+        serializedVersion: 2
+        x: 6093
+        y: 2735
+        width: 130
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3cee4f8f4f96dbb0800000000000000
+      internalID: -4911563179545400260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_10
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 2114
+        width: 532
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaffc7bde712cdf90800000000000000
+      internalID: -6927625298070667350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_11
+      rect:
+        serializedVersion: 2
+        x: 3055
+        y: 2623
+        width: 113
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e674494c065419f90800000000000000
+      internalID: -6948696468138735762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_12
+      rect:
+        serializedVersion: 2
+        x: 3392
+        y: 2623
+        width: 113
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e52badbe78877fc0800000000000000
+      internalID: -3497176507700533787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_13
+      rect:
+        serializedVersion: 2
+        x: 5522
+        y: 2122
+        width: 258
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ed0d413c8f46f00800000000000000
+      internalID: 1109284924991528583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_14
+      rect:
+        serializedVersion: 2
+        x: 5660
+        y: 2169
+        width: 217
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71369764911f892d0800000000000000
+      internalID: -3271600038425828585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_15
+      rect:
+        serializedVersion: 2
+        x: 5884
+        y: 2086
+        width: 257
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87845d271eee30970800000000000000
+      internalID: 8720075955581044856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_16
+      rect:
+        serializedVersion: 2
+        x: 6022
+        y: 2133
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46fb2a307e07e25e0800000000000000
+      internalID: -1932483052594610332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1261
+        height: 1728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a70356cfd856c50800000000000000
+      internalID: 6657883739306097166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_18
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 0
+        width: 1248
+        height: 1728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6271f4cc35ff3a950800000000000000
+      internalID: 6459287025954527014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_19
+      rect:
+        serializedVersion: 2
+        x: 2647
+        y: 0
+        width: 1266
+        height: 1728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 004254e7e3f9adfa0800000000000000
+      internalID: -5775128481393990656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_20
+      rect:
+        serializedVersion: 2
+        x: 3974
+        y: 0
+        width: 1262
+        height: 1728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b704a834aa6cfb0800000000000000
+      internalID: -4627824360017593544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PerksChoices_21
+      rect:
+        serializedVersion: 2
+        x: 5306
+        y: 0
+        width: 1248
+        height: 1728
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1ca92228a73d2e0800000000000000
+      internalID: -2102201901706985038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PerksChoices_0: -4094147417031743848
+      PerksChoices_1: -4486098433445045923
+      PerksChoices_10: -6927625298070667350
+      PerksChoices_11: -6948696468138735762
+      PerksChoices_12: -3497176507700533787
+      PerksChoices_13: 1109284924991528583
+      PerksChoices_14: -3271600038425828585
+      PerksChoices_15: 8720075955581044856
+      PerksChoices_16: -1932483052594610332
+      PerksChoices_17: 6657883739306097166
+      PerksChoices_18: 6459287025954527014
+      PerksChoices_19: -5775128481393990656
+      PerksChoices_2: -4875392573466180024
+      PerksChoices_20: -4627824360017593544
+      PerksChoices_21: -2102201901706985038
+      PerksChoices_3: -8009966166165311538
+      PerksChoices_4: 1402941062978967597
+      PerksChoices_5: 714609773108794958
+      PerksChoices_6: 7205539312533625201
+      PerksChoices_7: -8292669252361921143
+      PerksChoices_8: -1268107234664068153
+      PerksChoices_9: -4911563179545400260
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

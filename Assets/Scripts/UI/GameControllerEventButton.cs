@@ -4,7 +4,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class GameControllerEventButton : MonoBehaviour
 {
-    private enum EventType { Pause, Resume, ToMenu, ToGameplay }
+    private enum EventType { Pause, Resume, ToMenu, ToGameplay, Quit }
     [SerializeField] private EventType buttonType;
 
     private Button button;
@@ -30,6 +30,9 @@ public class GameControllerEventButton : MonoBehaviour
                 break;
             case EventType.ToGameplay:
                 GameController.Instance.ToGameplay();
+                break;
+            case EventType.Quit:
+                GameController.Instance.Quit();
                 break;
             default:
                 Debug.LogWarning($"Unknown button type: {buttonType}");
