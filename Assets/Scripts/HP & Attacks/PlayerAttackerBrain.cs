@@ -4,13 +4,17 @@ using UnityEngine.InputSystem;
 public class PlayerAttackerBrain : AttackerBrain
 {
     [SerializeField] private InputActionAsset _asset;
-    private InputAction _attackAction;
+    [SerializeField] private Camera _camera;
 
     private void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (_asset.FindAction("Attack").WasPerformedThisFrame())
         {
-            Attack(0, new Vector2 (1, 0));
+            var pointerPos = _asset.FindAction("Point").ReadValue<Vector2>();
+            Vector3 cameraDistance = transform.position - _camera.transform.position;
+            Vector3 screenPoint = new Vector3(pointerPos.x, pointerPos.y, cameraDistance.z);
+            var clickDirection = _camera.ScreenToWorldPoint(screenPoint) - transform.position;
+            Attack(0, clickDirection.normalized);
         }
     }
 }

@@ -15,7 +15,7 @@ public class Projectile : AttackObject
 
     internal override IEnumerator Move()
     {
-        Vector3 newPosition = direction * speed * Time.deltaTime;
+        Vector3 newPosition = direction.normalized * speed * Time.deltaTime;
         while (!hasHitSomething && !timerEnded)
         {
             yield return transform.position += newPosition;
