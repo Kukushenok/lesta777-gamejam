@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DebuffManager : MonoBehaviour
 {
@@ -23,13 +24,23 @@ public class DebuffManager : MonoBehaviour
 
         for (int i = 0; i < list.Count; i++)
         {
-            var button = Instantiate(_debuffButtonPrefab, _canvas);
-            var rect = button.GetComponent<RectTransform>();
+            var buttonObj = Instantiate(_debuffButtonPrefab, _canvas);
+            var rect = buttonObj.GetComponent<RectTransform>();
             rect.anchoredPosition = new Vector2(0f, y);
             y += 150f;
 
-            var buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
-            buttonText.text = list[i].Name;
+            var debuff = list[i];
+            var buttonText = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
+            buttonText.text = debuff.Name;
+
+            var button = buttonObj.GetComponent<Button>();
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(() => { GetDebuffButtonValue(debuff); });
         }
+    }
+
+    private void GetDebuffButtonValue(DebuffSO debuff)
+    {
+        Debug.Log(debuff.Name);
     }
 }
