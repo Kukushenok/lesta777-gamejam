@@ -3,13 +3,13 @@ using UnityEngine;
 
 public abstract class AttackObject : MonoBehaviour
 {
-    internal Vector2 direction;
-    internal GameObject parent;
-    internal float damage;
-    internal float speed;
-    internal float expirationTime;
-    internal bool timerEnded = false;
-    internal bool hasHitSomething;
+    protected Vector2 direction;
+    protected GameObject parent;
+    protected float damage;
+    protected float speed;
+    protected float expirationTime;
+    protected bool timerEnded = false;
+    protected bool hasHitSomething;
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public abstract class AttackObject : MonoBehaviour
     {
         GameObject gameObject = collision.gameObject;
 
-        if (gameObject != parent)
+        if (parent.tag!=gameObject.tag)
         {
             gameObject.GetComponent<Health>().TakeDamage(damage);
             hasHitSomething = true;
