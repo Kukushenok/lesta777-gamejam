@@ -1,23 +1,38 @@
+using Cysharp.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : Singleton<LevelManager>
 {
-    public static LevelManager Instance;
-
-    private void Awake()
+    public bool Transition { get; private set; }
+    [field: SerializeField] public int LevelCount { get; private set; }
+    [SerializeField] private int mainMenuIndex = 0;
+    [SerializeField] private int levelStartIndex;
+    [SerializeField] private int resultsIndex;
+    public void ToResults()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Transition) return;
+        LoadSceneByIndex(resultsIndex).Forget();
     }
-
-    public void LoadSceneByIndex(int index)
+    public void ToGameplay(int levelID)
     {
+        if (Transition) return;
+        LoadSceneByIndex(levelStartIndex + levelID).Forget();
+    }
+    public void ToMenu()
+    {
+        if (Transition) return;
+        LoadSceneByIndex(mainMenuIndex).Forget();
+    }
+    private async UniTask LoadSceneByIndex(int index)
+    {
+        Transition = true;
         if (IsSceneValid(index))
         {
-            SceneManager.LoadScene(index);
+            await SceneManager.LoadSceneAsync(index);
         }
+        Transition = false;
     }
 
     private bool IsSceneValid(int index)

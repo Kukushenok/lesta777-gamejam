@@ -1,0 +1,13 @@
+using Cysharp.Threading.Tasks;
+using System.Collections;
+using UnityEngine;
+
+public class PlayerDebuffManager : MonoBehaviour
+{
+    [SerializeField] DebuffRepositorySO TMP;
+    public int DebuffPoints { get; private set; } = 0;
+    private void Start()
+    {
+        GameController.Instance.SpawnDebuff.ApplyDebuff(gameObject);
+    }
+}

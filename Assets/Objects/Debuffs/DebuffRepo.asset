@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b4d438a69b5eb43b28217d26926d5d, type: 3}
+  m_Name: DebuffRepo
+  m_EditorClassIdentifier: Assembly-CSharp::DebuffRepositorySO
+  debuffs:
+  - {fileID: 11400000, guid: 15bb210f67a62d946a8e68d873c78fac, type: 2}
+  - {fileID: 11400000, guid: 29b0f5134af061a458d9b30679d9f576, type: 2}
+  - {fileID: 11400000, guid: 2cb216ce04176574c9c277f7ba15f13e, type: 2}
+  - {fileID: 11400000, guid: d08f1461097c3284bbb4585995fe9a55, type: 2}
