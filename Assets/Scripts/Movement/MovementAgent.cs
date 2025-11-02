@@ -12,6 +12,8 @@ public class MovementAgent : MonoBehaviour
     {
         _rg = GetComponent<Rigidbody2D>();
         _rg.gravityScale = 0;
+        _rg.freezeRotation = true;
+        _rg.interpolation = RigidbodyInterpolation2D.Interpolate;
     }
     private void Update()
     {
