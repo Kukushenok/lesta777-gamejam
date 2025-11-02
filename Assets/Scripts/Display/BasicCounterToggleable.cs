@@ -20,7 +20,7 @@ public class BasicCounterToggleable : MonoBehaviour, ICounterToggleable
             StopCoroutine(currentCoroutine);
             currentCoroutine = null;
         }
-        StartCoroutine(WaitAndSet(value, initDelay + delayIndex * indexSetDelay));
+        currentCoroutine = StartCoroutine(WaitAndSet(value, initDelay + delayIndex * indexSetDelay));
     }
     private IEnumerator WaitAndSet(bool value, float time)
     {
