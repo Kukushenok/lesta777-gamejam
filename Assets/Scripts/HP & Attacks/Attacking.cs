@@ -6,6 +6,6 @@ public class Attacking : MonoBehaviour
 
     public void Attack()
     {
-        Instantiate(attackObjectPrefab, this.transform).GetComponent<AttackObject>().Attack(new Vector2(-1,0),10,1);
+        Instantiate(attackObjectPrefab, this.transform).GetComponent<AttackObject>().Attack(new Vector2(-1,0),10,1,1);
     }
 }

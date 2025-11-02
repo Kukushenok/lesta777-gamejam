@@ -3,29 +3,43 @@ using UnityEngine;
 
 public abstract class AttackObject : MonoBehaviour
 {
-    internal Vector2 direction;
-    internal GameObject parent;
-    internal float damage;
-    internal float speed;
-    internal bool hasHitSomething;
+    protected Vector2 direction;
+    protected GameObject parent;
+    protected float damage;
+    protected float speed;
+    protected float expirationTime;
+    protected bool timerEnded = false;
+    protected bool hasHitSomething;
 
     private void Awake()
     {
         parent = this.transform.parent.gameObject;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void Update()
+    {
+
+        expirationTime -= Time.deltaTime;
+
+        if (expirationTime <= 0.0f)
+        {
+            timerEnded = true;
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject gameObject = collision.gameObject;
 
-        if (gameObject != parent)
+        if (parent.tag!=gameObject.tag)
         {
             gameObject.GetComponent<Health>().TakeDamage(damage);
             hasHitSomething = true;
         }
     }
 
-    public abstract void Attack(Vector2 direction, float damage, float speed);
+    public abstract void Attack(Vector2 direction, float damage, float speed, float time);
 
     internal abstract IEnumerator Move();
 }
