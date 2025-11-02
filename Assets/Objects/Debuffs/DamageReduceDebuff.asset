@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageDebuffSO
   <Name>k__BackingField: "\u0423\u0420\u041E\u041D \u041C\u0418\u041D\u0423\u0421"
   <Description>k__BackingField: "\u0423\u0420\u041E\u041D \u041C\u0418\u041D\u0423\u0421"
+  <Sprite>k__BackingField: {fileID: -4094147417031743848, guid: 819306a80e7203c45a7d98354954ac43, type: 3}
   modifier: 0.8

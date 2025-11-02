@@ -1,73 +1,37 @@
 fileFormatVersion: 2
-guid: 819306a80e7203c45a7d98354954ac43
+guid: 6896e7a7a96989c449364132d63f007f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4094147417031743848
-    second: PerksChoices_0
+      213: 2125146973328458168
+    second: sexyman_0
   - first:
-      213: -4486098433445045923
-    second: PerksChoices_1
+      213: 7186117828446718830
+    second: sexyman_1
   - first:
-      213: -4875392573466180024
-    second: PerksChoices_2
+      213: -8180651728463381519
+    second: sexyman_2
   - first:
-      213: -8009966166165311538
-    second: PerksChoices_3
+      213: 6302821492126427687
+    second: sexyman_3
   - first:
-      213: 1402941062978967597
-    second: PerksChoices_4
+      213: -460537173755172341
+    second: sexyman_4
   - first:
-      213: 714609773108794958
-    second: PerksChoices_5
+      213: 7175451186424210871
+    second: sexyman_5
   - first:
-      213: 7205539312533625201
-    second: PerksChoices_6
+      213: -6759015853244991766
+    second: sexyman_6
   - first:
-      213: -8292669252361921143
-    second: PerksChoices_7
+      213: 6463213479334444227
+    second: sexyman_7
   - first:
-      213: -1268107234664068153
-    second: PerksChoices_8
+      213: 6823666929751621344
+    second: sexyman_8
   - first:
-      213: -4911563179545400260
-    second: PerksChoices_9
-  - first:
-      213: -6927625298070667350
-    second: PerksChoices_10
-  - first:
-      213: -6948696468138735762
-    second: PerksChoices_11
-  - first:
-      213: -3497176507700533787
-    second: PerksChoices_12
-  - first:
-      213: 1109284924991528583
-    second: PerksChoices_13
-  - first:
-      213: -3271600038425828585
-    second: PerksChoices_14
-  - first:
-      213: 8720075955581044856
-    second: PerksChoices_15
-  - first:
-      213: -1932483052594610332
-    second: PerksChoices_16
-  - first:
-      213: 6657883739306097166
-    second: PerksChoices_17
-  - first:
-      213: 6459287025954527014
-    second: PerksChoices_18
-  - first:
-      213: -5775128481393990656
-    second: PerksChoices_19
-  - first:
-      213: -4627824360017593544
-    second: PerksChoices_20
-  - first:
-      213: -2102201901706985038
-    second: PerksChoices_21
+      213: -4496151373100696683
+    second: sexyman_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +73,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -189,57 +153,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PerksChoices_0
+      name: sexyman_0
       rect:
         serializedVersion: 2
-        x: 428
-        y: 2007
-        width: 402
-        height: 1042
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8966dbdad9aae27c0800000000000000
-      internalID: -4094147417031743848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PerksChoices_1
-      rect:
-        serializedVersion: 2
-        x: 1597
-        y: 2068
-        width: 716
-        height: 913
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d59521f3e3d2eb1c0800000000000000
-      internalID: -4486098433445045923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PerksChoices_2
-      rect:
-        serializedVersion: 2
-        x: 2720
-        y: 2073
-        width: 1145
-        height: 922
+        x: 2166
+        y: 3636
+        width: 69
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84688fd0940275cb0800000000000000
-      internalID: -4875392573466180024
+      spriteID: 8b14db8a9e90e7d10800000000000000
+      internalID: 2125146973328458168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerksChoices_3
+      name: sexyman_1
       rect:
         serializedVersion: 2
-        x: 5485
-        y: 2043
-        width: 880
-        height: 944
+        x: 2255
+        y: 3599
+        width: 37
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,140 +190,184 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ecfa1d2e532e6d090800000000000000
-      internalID: -8009966166165311538
+      spriteID: e6b0bae57183ab360800000000000000
+      internalID: 7186117828446718830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerksChoices_5
+      name: sexyman_2
       rect:
         serializedVersion: 2
-        x: 4283
-        y: 2116
-        width: 644
-        height: 811
+        x: 2291
+        y: 3588
+        width: 8
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e461c2f6dcdcae900800000000000000
-      internalID: 714609773108794958
+      spriteID: 1fb31cd889c787e80800000000000000
+      internalID: -8180651728463381519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerksChoices_17
+      name: sexyman_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2300
+        y: 3576
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72aa4e8d0ce187750800000000000000
+      internalID: 6302821492126427687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sexyman_4
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 3535
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ae57861e7db99f0800000000000000
+      internalID: -460537173755172341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sexyman_5
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 3573
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b568fd36d2549360800000000000000
+      internalID: 7175451186424210871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sexyman_6
+      rect:
+        serializedVersion: 2
+        x: 2332
+        y: 3580
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6391c64e62332a0800000000000000
+      internalID: -6759015853244991766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sexyman_7
+      rect:
+        serializedVersion: 2
+        x: 160
         y: 0
-        width: 1261
-        height: 1728
+        width: 3203
+        height: 3539
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0a70356cfd856c50800000000000000
-      internalID: 6657883739306097166
+      spriteID: 3ccfe377a62f1b950800000000000000
+      internalID: 6463213479334444227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerksChoices_18
+      name: sexyman_8
       rect:
         serializedVersion: 2
-        x: 1331
-        y: 0
-        width: 1248
-        height: 1728
+        x: 2301
+        y: 3534
+        width: 13
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6271f4cc35ff3a950800000000000000
-      internalID: 6459287025954527014
+      spriteID: 0eefc655be882be50800000000000000
+      internalID: 6823666929751621344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerksChoices_19
+      name: sexyman_9
       rect:
         serializedVersion: 2
-        x: 2647
-        y: 0
-        width: 1266
-        height: 1728
+        x: 2370
+        y: 3516
+        width: 7
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 004254e7e3f9adfa0800000000000000
-      internalID: -5775128481393990656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PerksChoices_20
-      rect:
-        serializedVersion: 2
-        x: 3974
-        y: 0
-        width: 1262
-        height: 1728
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 83b704a834aa6cfb0800000000000000
-      internalID: -4627824360017593544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PerksChoices_21
-      rect:
-        serializedVersion: 2
-        x: 5306
-        y: 0
-        width: 1248
-        height: 1728
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b1ca92228a73d2e0800000000000000
-      internalID: -2102201901706985038
+      spriteID: 59bb2f5d5267a91c0800000000000000
+      internalID: -4496151373100696683
       vertices: []
       indices: 
       edges: []
@@ -412,7 +376,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dfb2d060677f1b54783bd3476e3de381
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -422,29 +386,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PerksChoices_0: -4094147417031743848
-      PerksChoices_1: -4486098433445045923
-      PerksChoices_10: -6927625298070667350
-      PerksChoices_11: -6948696468138735762
-      PerksChoices_12: -3497176507700533787
-      PerksChoices_13: 1109284924991528583
-      PerksChoices_14: -3271600038425828585
-      PerksChoices_15: 8720075955581044856
-      PerksChoices_16: -1932483052594610332
-      PerksChoices_17: 6657883739306097166
-      PerksChoices_18: 6459287025954527014
-      PerksChoices_19: -5775128481393990656
-      PerksChoices_2: -4875392573466180024
-      PerksChoices_20: -4627824360017593544
-      PerksChoices_21: -2102201901706985038
-      PerksChoices_22: -1180475257
-      PerksChoices_3: -8009966166165311538
-      PerksChoices_4: 1402941062978967597
-      PerksChoices_5: 714609773108794958
-      PerksChoices_6: 7205539312533625201
-      PerksChoices_7: -8292669252361921143
-      PerksChoices_8: -1268107234664068153
-      PerksChoices_9: -4911563179545400260
+      sexyman_0: 2125146973328458168
+      sexyman_1: 7186117828446718830
+      sexyman_2: -8180651728463381519
+      sexyman_3: 6302821492126427687
+      sexyman_4: -460537173755172341
+      sexyman_5: 7175451186424210871
+      sexyman_6: -6759015853244991766
+      sexyman_7: 6463213479334444227
+      sexyman_8: 6823666929751621344
+      sexyman_9: -4496151373100696683
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

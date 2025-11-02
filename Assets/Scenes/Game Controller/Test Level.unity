@@ -6436,6 +6436,7 @@ GameObject:
   - component: {fileID: 1799023581}
   - component: {fileID: 1799023580}
   - component: {fileID: 1799023582}
+  - component: {fileID: 1799023583}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -6461,7 +6462,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 920, y: -500.141}
+  m_AnchoredPosition: {x: 920.25586, y: -500}
   m_SizeDelta: {x: 300.2866, y: 433.6184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799023580
@@ -6484,8 +6485,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6459287025954527014, guid: 819306a80e7203c45a7d98354954ac43, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6546,6 +6547,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1799023583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799023578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81553246811ada049902cc710c690a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomImage
+  sprites:
+  - {fileID: 6657883739306097166, guid: 819306a80e7203c45a7d98354954ac43, type: 3}
+  - {fileID: 6459287025954527014, guid: 819306a80e7203c45a7d98354954ac43, type: 3}
+  - {fileID: -5775128481393990656, guid: 819306a80e7203c45a7d98354954ac43, type: 3}
+  - {fileID: -4627824360017593544, guid: 819306a80e7203c45a7d98354954ac43, type: 3}
+  - {fileID: -2102201901706985038, guid: 819306a80e7203c45a7d98354954ac43, type: 3}
 --- !u!1 &1905908802
 GameObject:
   m_ObjectHideFlags: 0
@@ -6708,9 +6727,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
