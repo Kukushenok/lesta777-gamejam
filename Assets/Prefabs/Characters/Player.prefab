@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MovementAgent
   _movementBrain: {fileID: 8989942403420494118}
   _perspectiveSettings: {fileID: 11400000, guid: acaed45e48713f142bf9ba7e8ed2c5c6, type: 2}
-  _speed: 3
+  _speed: 5
   _damp: 10
 --- !u!114 &8989942403420494118
 MonoBehaviour:
@@ -234,6 +234,7 @@ MonoBehaviour:
     expirationTime: 5
   <MyRenderer>k__BackingField: {fileID: 4049117629940609295}
   _asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  _camera: {fileID: 0}
 --- !u!114 &7101179464246203579
 MonoBehaviour:
   m_ObjectHideFlags: 0
