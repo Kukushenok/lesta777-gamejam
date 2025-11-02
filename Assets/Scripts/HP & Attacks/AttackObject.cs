@@ -7,6 +7,8 @@ public abstract class AttackObject : MonoBehaviour
     internal GameObject parent;
     internal float damage;
     internal float speed;
+    internal float expirationTime;
+    internal bool timerEnded = false;
     internal bool hasHitSomething;
 
     private void Awake()
@@ -14,7 +16,19 @@ public abstract class AttackObject : MonoBehaviour
         parent = this.transform.parent.gameObject;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void Update()
+    {
+
+        expirationTime -= Time.deltaTime;
+
+        if (expirationTime <= 0.0f)
+        {
+            timerEnded = true;
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject gameObject = collision.gameObject;
 
@@ -25,7 +39,7 @@ public abstract class AttackObject : MonoBehaviour
         }
     }
 
-    public abstract void Attack(Vector2 direction, float damage, float speed);
+    public abstract void Attack(Vector2 direction, float damage, float speed, float time);
 
     internal abstract IEnumerator Move();
 }
