@@ -12,6 +12,6 @@ public class FloatBarDisplay : ValueDisplay<float>
     [SerializeField] private float _damp;
     public void Update()
     {
-        _img.fillAmount = Mathf.Lerp(_img.fillAmount, ratio, 1 - Mathf.Exp(-Time.deltaTime * _damp));
+        _img.fillAmount = Mathf.Lerp(_img.fillAmount, DisplayValue / _maxValue, 1 - Mathf.Exp(-Time.deltaTime * _damp));
     }
 }

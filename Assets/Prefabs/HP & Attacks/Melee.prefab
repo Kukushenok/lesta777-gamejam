@@ -150,3 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3063271bcbfd9ae4ba8ba1797b375baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Melee
+  OnAttackExpired:
+    m_PersistentCalls:
+      m_Calls: []
+  maximumAngle: 10
