@@ -2,10 +2,17 @@ using UnityEngine;
 
 public class DarknessManager : MonoBehaviour
 {
-    [SerializeField]
-    private float _darknessLimit;
+    [SerializeField] private float _darknessLimit;
 
     private float _darkness;
+
+    public static DarknessManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
 
     public float Darkness
     {
