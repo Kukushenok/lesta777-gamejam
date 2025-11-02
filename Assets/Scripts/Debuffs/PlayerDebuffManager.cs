@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerDebuffManager : MonoBehaviour
 {
-    [SerializeField] DebuffRepositorySO TMP;
     public int DebuffPoints { get; private set; } = 0;
     private void Start()
     {

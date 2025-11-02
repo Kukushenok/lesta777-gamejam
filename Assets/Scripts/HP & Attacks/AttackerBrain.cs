@@ -8,6 +8,7 @@ using UnityEngine.InputSystem.LowLevel;
 public abstract class AttackerBrain : MonoBehaviour
 {
     [SerializeField] protected List<AttackParameters> availableAttacks;
+    [field: SerializeField] public SpriteRenderer MyRenderer { get; private set; }
     protected Attacker _attacker;
 
     private void Awake()
