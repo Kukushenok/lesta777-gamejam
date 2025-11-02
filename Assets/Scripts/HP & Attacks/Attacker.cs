@@ -5,12 +5,10 @@ using UnityEngine.Events;
 
 public class Attacker : MonoBehaviour
 {
-    [SerializeField] float damage;
-    [SerializeField] float speed = 0;
-    [SerializeField] float expirationTime;
     [SerializeField] UnityEvent OnAttack;
-    [SerializeField] int debugID;
     [SerializeField] List<GameObject> attackObjectPrefabs;
+
+    public int attackCount { get =>  attackObjectPrefabs.Count; }
 
     public void Attack(int attackID, Vector2 direction, float damage, float speed, float time)
     {
@@ -22,12 +20,6 @@ public class Attacker : MonoBehaviour
             attack.Attack(direction, damage, speed, time);
         }
         else throw new Exception("Attack at this ID is not assigned");
-    }
-
-    public void DebugFunction()
-    {
-        Vector2 debugDirection = FindFirstObjectByType<PlayerHealth>().transform.position - transform.position;
-        Attack(debugID, debugDirection.normalized, damage, speed, expirationTime);
     }
 }
 

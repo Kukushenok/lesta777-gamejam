@@ -799,7 +799,7 @@ GameObject:
   - component: {fileID: 1653252230}
   - component: {fileID: 1653252231}
   m_Layer: 0
-  m_Name: PlayerDummy
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

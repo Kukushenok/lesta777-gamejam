@@ -45,7 +45,8 @@ public abstract class AttackObject : MonoBehaviour
 
         if (parent.tag!=gameObject.tag)
         {
-            gameObject.GetComponent<Health>().TakeDamage(damage);
+            var health = gameObject.GetComponent<Health>();
+            health?.TakeDamage(damage);
             hasHitSomething = true;
         }
     }

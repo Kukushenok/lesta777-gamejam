@@ -5,6 +5,11 @@ public class HealthUIDisplay : MonoBehaviour
     [SerializeField] private Health hp;
     [SerializeField] private ValueDisplay<float> healthDisplay;
 
+    private void Awake()
+    {
+        GetComponentInChildren<FloatBarDisplay>().SetMaxValue(hp.maxHealth);
+    }
+
     private void Update()
     {
         if(Mathf.Abs(hp.health - healthDisplay.DisplayValue) > 1e-5)
