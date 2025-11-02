@@ -1,7 +1,22 @@
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public class GameController : MonoBehaviour
 {
+    private IState _currentState;
+
+    private MenuState _menuState = new();
+
+    private BattleState _battleState = new();
+
+    private GameOverState _gameOverState = new();
+
+    private PauseState _pauseState = new();
+
+    private SkillSelectionState _skillSelectionState = new();
+
+    private VictoryState _victoryState = new();
+
     public static GameController Instance;
 
     private void Awake()
@@ -10,28 +25,22 @@ public class GameController : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public void Menu()
+    private async UniTask ChangeStateAsync(IState newState)
     {
-        Debug.Log("Menu");
+        if (_currentState != null) await _currentState.OnExit();
+        _currentState = newState;
+        await _currentState.OnEnterAsync();
     }
 
-    public void Battle()
-    {
-        Debug.Log("Battle");
-    }
+    public void Menu() => ChangeStateAsync(_menuState).Forget();
 
-    public void SkillSelection()
-    {
-        Debug.Log("SkillSelection");
-    }
+    public void Battle() => ChangeStateAsync(_battleState).Forget();
 
-    public void GameOver()
-    {
-        Debug.Log("GameOver");
-    }
+    public void GameOver() => ChangeStateAsync(_gameOverState).Forget();
 
-    public void Victory()
-    {
-        Debug.Log("Victory");
-    }
+    public void Pause() => ChangeStateAsync(_pauseState).Forget();
+
+    public void SkillSelection() => ChangeStateAsync(_skillSelectionState).Forget();
+
+    public void Victory() => ChangeStateAsync(_victoryState).Forget();
 }
