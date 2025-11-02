@@ -12,6 +12,7 @@ public class MovementAgent : MonoBehaviour
     {
         _rg = GetComponent<Rigidbody2D>();
         _rg.gravityScale = 0;
+        _rg.freezeRotation = true;
     }
     private void Update()
     {
