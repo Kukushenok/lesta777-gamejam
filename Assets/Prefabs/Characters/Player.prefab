@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 129390648561523472}
   - component: {fileID: 1425027450809462298}
   - component: {fileID: 4916416201241415984}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: SliderBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4244275449309463954}
   - component: {fileID: 1738337839160542883}
   - component: {fileID: 8444633034177407521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 6475859194673587322}
   - component: {fileID: 4841859887955234799}
   - component: {fileID: 2216955917145626303}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 2268270517173655389}
   - component: {fileID: 4573338602334504261}
   - component: {fileID: 7270802227619281445}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430135662979209042}
   - component: {fileID: 5991252701936445857}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerXPBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,8 @@ GameObject:
   - component: {fileID: 2109477977695644889}
   - component: {fileID: 4049117629940609295}
   - component: {fileID: 2640519471354810527}
-  m_Layer: 0
+  - component: {fileID: 1667862664511440983}
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,6 +662,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1667862664511440983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9192595573324293910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3936ecf87abd94da3317e8364357ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LayeringFixer
 --- !u!1001 &4669846922589169659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -672,6 +685,18 @@ PrefabInstance:
     - target: {fileID: 2147169564852766410, guid: edeb43b40ed210f47816d18a0273f9b7, type: 3}
       propertyPath: m_Name
       value: EnemyHealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147169564852766410, guid: edeb43b40ed210f47816d18a0273f9b7, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2552193803042317678, guid: edeb43b40ed210f47816d18a0273f9b7, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3842841605771953018, guid: edeb43b40ed210f47816d18a0273f9b7, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6336090131698819469, guid: edeb43b40ed210f47816d18a0273f9b7, type: 3}
       propertyPath: m_Pivot.x
@@ -834,6 +859,10 @@ PrefabInstance:
     - target: {fileID: 8688475125496987734, guid: 37648c50f512d8c4f8dcfde3b11d19ea, type: 3}
       propertyPath: m_Name
       value: Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688475125496987734, guid: 37648c50f512d8c4f8dcfde3b11d19ea, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

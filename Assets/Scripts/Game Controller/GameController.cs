@@ -71,6 +71,7 @@ public class GameController : Singleton<GameController>
         if(State == GameState.MainMenu)
         {
             progressData = new ProgressData(repositorySO.GetFetcher());
+            lastSavedProgressData = progressData.Save();
             DarknessManager.Instance.ResetDarkness(true);
             LevelManager.Instance.ToGameplay(progressData.levelIndex);
             State = GameState.Gameplay;
@@ -81,6 +82,7 @@ public class GameController : Singleton<GameController>
             LevelManager.Instance.ToGameplay(progressData.levelIndex);
             DarknessManager.Instance.ResetDarkness(false);
             State = GameState.Gameplay;
+            timeAnimator.SetTime(1, pauseTime);
         }
         else
         {
