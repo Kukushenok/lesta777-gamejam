@@ -74,7 +74,6 @@ public class GameController : Singleton<GameController>
             LevelManager.Instance.ToGameplay(progressData.levelIndex);
             DarknessManager.Instance.ResetDarkness(false);
             State = GameState.Gameplay;
-            timeAnimator.SetTime(1, deathTime);
         }
         else
         {
@@ -145,6 +144,7 @@ public class GameController : Singleton<GameController>
         {
             State = GameState.MainMenu;
             LevelManager.Instance.ToMenu();
+            timeAnimator.SetTime(1, deathTime);
         }
         if(State == GameState.Pause)
         {
