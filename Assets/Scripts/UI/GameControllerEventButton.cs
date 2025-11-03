@@ -15,7 +15,7 @@ public class GameControllerEventButton : MonoBehaviour
         button.onClick.AddListener(OnButtonClicked);
     }
 
-    private void OnButtonClicked()
+    public void OnButtonClicked()
     {
         switch (buttonType)
         {
