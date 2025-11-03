@@ -2289,7 +2289,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0443\u0440. 10"
+  m_text: "\u0443\u0440. 99"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee41da050dea64f4ca11925bbf5e389d, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 37948eb90fe3dd240bff6430812efcf0, type: 2}
