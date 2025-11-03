@@ -152,7 +152,7 @@ MonoBehaviour:
   AttackDamageModifier: 1
   availableAttacks:
   - id: 0
-    damage: 2
+    damage: 7
     speed: 0
     expirationTime: 0.2
   offset: {x: 0, y: 0}
