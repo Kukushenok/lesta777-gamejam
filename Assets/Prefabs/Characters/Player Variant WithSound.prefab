@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1935180573456297826, guid: 2163d9069e6c7ba4f9360b2d3d81a797, type: 3}
+      propertyPath: _speed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3929013648840314911, guid: 2163d9069e6c7ba4f9360b2d3d81a797, type: 3}
       propertyPath: animator
       value: 
@@ -111,6 +115,14 @@ PrefabInstance:
     - target: {fileID: 5385838632270755463, guid: 2163d9069e6c7ba4f9360b2d3d81a797, type: 3}
       propertyPath: m_Name
       value: Player Variant WithSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116211979544854722, guid: 2163d9069e6c7ba4f9360b2d3d81a797, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116211979544854722, guid: 2163d9069e6c7ba4f9360b2d3d81a797, type: 3}
+      propertyPath: maxHealth
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8995403980273586626, guid: 2163d9069e6c7ba4f9360b2d3d81a797, type: 3}
       propertyPath: m_LocalPosition.x

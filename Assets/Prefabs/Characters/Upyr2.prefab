@@ -85,7 +85,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   health: 20
-  _xp: 5
+  _xp: 1
   _expChannel: {fileID: 11400000, guid: e5195a232b7347e4cba2cdbcb06499f1, type: 2}
 --- !u!114 &1373364094055004297
 MonoBehaviour:
