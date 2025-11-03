@@ -408,6 +408,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4738775532421744933}
     m_Modifications:
+    - target: {fileID: 59323871893737065, guid: edeb43b40ed210f47816d18a0273f9b7, type: 3}
+      propertyPath: _maxValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2147169564852766410, guid: edeb43b40ed210f47816d18a0273f9b7, type: 3}
       propertyPath: m_Name
       value: EnemyHealthBar
@@ -424,6 +428,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6100112338281532305, guid: edeb43b40ed210f47816d18a0273f9b7, type: 3}
+      propertyPath: hp
+      value: 
+      objectReference: {fileID: 235274931170821127}
     - target: {fileID: 6336090131698819469, guid: edeb43b40ed210f47816d18a0273f9b7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: _deathEffectPrefab
       value: 
       objectReference: {fileID: 2631372867059355793, guid: 29acf43e2368051449e5e55e01636fdf, type: 3}
+    - target: {fileID: 1280062800002324534, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
+      propertyPath: _maxValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1373364094055004297, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
       propertyPath: _speed
       value: 4
@@ -72,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 5023346680712814030, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
+      propertyPath: hp
+      value: 
+      objectReference: {fileID: 6259055810772878328}
     - target: {fileID: 5547313697896813964, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
       propertyPath: 'attackObjectPrefabs.Array.data[0]'
       value: 
@@ -121,3 +129,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
+--- !u!114 &6259055810772878328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 235274931170821127, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
+  m_PrefabInstance: {fileID: 6169790016471664639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719ca8d30ee4c594fa6857a7f9fc1288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
