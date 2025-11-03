@@ -5,20 +5,25 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Land
+    second: {fileID: 2100000, guid: 92f13342107075f46bd79b70fb01b889, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: plane_grass-2_BaseColor
-    second: {fileID: 2800000, guid: 96aa58230287f3d48bf7ae6e8459f04e, type: 3}
+    second: {fileID: 2800000, guid: de51a09723239984facc1a5b78c4a8c4, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: plane_grass-2_Metallic
-    second: {fileID: 2800000, guid: 077a881c220845e46b6a19ee2a21c4e1, type: 3}
+    second: {fileID: 2800000, guid: fedc8e16c017aa945892d6e54ec6cdd6, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: plane_grass-2_Roughness
-    second: {fileID: 2800000, guid: 852135849be75f143ac246afde9a41b3, type: 3}
+    second: {fileID: 2800000, guid: 7b061ea2d93d38b43ad2a9733d55c205, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -48,7 +53,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 2
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -83,7 +88,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
@@ -106,7 +111,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
