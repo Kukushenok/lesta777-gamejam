@@ -33,16 +33,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 5857050331038126516}
-    m_Position: {x: 340, y: 30, z: 0}
+    m_Position: {x: 380, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1719984265210680153}
-    m_Position: {x: 340, y: 170, z: 0}
+    m_Position: {x: 370, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1000122159480682282}
-    m_Position: {x: 540, y: 100, z: 0}
+    m_Position: {x: 530, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6769331350732007318}
-    m_Position: {x: 230, y: 100, z: 0}
+    m_Position: {x: 240, y: 100, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -85,7 +85,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: debuffwindow_exit
+  m_Name: deathwindow_exit
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -99,7 +99,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 325b7ee96eeab54478bd3670662d5e60, type: 2}
+  m_Motion: {fileID: 7400000, guid: 0853034539a43904c979b96fdfe2caa6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -112,7 +112,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: debuffwindow_idle
+  m_Name: deathwindow_idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -126,7 +126,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e88613354f8ba2f4b9bcd1dace372588, type: 2}
+  m_Motion: {fileID: 7400000, guid: 869970453675c804eb0c3d5d94512ab0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -138,7 +138,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DebuffWindow
+  m_Name: DeathWindow
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Open
@@ -189,7 +189,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: debuffwindow_init
+  m_Name: deathwindow_init
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -203,7 +203,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f359498ff157c62419fa03e3afb82969, type: 2}
+  m_Motion: {fileID: 7400000, guid: b323fb804aa91844caad35411bfcf41b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -216,7 +216,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: debuffwindow_closed
+  m_Name: deathwindow_closed
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -230,7 +230,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 378a4346184ed444b919446ca2e4a075, type: 2}
+  m_Motion: {fileID: 7400000, guid: 0cc069bcdb38fa146b8a91b639e02705, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

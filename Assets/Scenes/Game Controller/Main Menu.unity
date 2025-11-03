@@ -8849,6 +8849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DarknessManager
   _darknessLevel: 5
+  expChannelSO: {fileID: 11400000, guid: e5195a232b7347e4cba2cdbcb06499f1, type: 2}
 --- !u!4 &1535616697
 Transform:
   m_ObjectHideFlags: 0

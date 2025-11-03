@@ -47,6 +47,7 @@ public class GameController : Singleton<GameController>
 {
     [SerializeField] private DebuffRepositorySO repositorySO;
     [SerializeField] private float pauseTime = 0.1f;
+    [SerializeField] private float deathTime = 0.5f;
     [SerializeField] private float perkChooseTime = 1.0f;
     private TimeAnimator timeAnimator = new TimeAnimator(1.0f);
     private ProgressData progressData;
@@ -73,6 +74,7 @@ public class GameController : Singleton<GameController>
             LevelManager.Instance.ToGameplay(progressData.levelIndex);
             DarknessManager.Instance.ResetDarkness(false);
             State = GameState.Gameplay;
+            timeAnimator.SetTime(1, deathTime);
         }
         else
         {
@@ -84,7 +86,9 @@ public class GameController : Singleton<GameController>
         if (State == GameState.Gameplay && !LevelManager.Instance.Transition)
         {
             State = GameState.LostScreen;
-            LevelManager.Instance.ToResults();
+            var x = FindFirstObjectByType<GameplayCanvas>();
+            timeAnimator.SetTime(0, deathTime);
+            if (x != null) x.ShowDeath();
         }
         else
         {

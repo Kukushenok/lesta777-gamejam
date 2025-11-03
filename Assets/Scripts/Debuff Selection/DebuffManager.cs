@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -12,9 +13,8 @@ public class DebuffManager : MonoBehaviour
     [SerializeField] private GameObject _debuffButtonPrefab;
 
     [SerializeField] private Transform _parent;
-    [SerializeField] private GameObject windowParent;
+    [SerializeField] private GameplayCanvas _canvas;
     [SerializeField] private float destroyTime;
-    [SerializeField] private UnityEvent OnDebuffSelected;
     private List<GameObject> choices = new List<GameObject>();
     private bool destroying = false;
 
@@ -27,7 +27,7 @@ public class DebuffManager : MonoBehaviour
     {
         foreach (var x in choices) Destroy(x);
         choices.Clear();
-        windowParent.SetActive(true);
+        _canvas.PickDebuff();
         for (int i = 0; i < list.Count; i++)
         {
             var buttonObj = Instantiate(_debuffButtonPrefab, _parent);
@@ -58,9 +58,8 @@ public class DebuffManager : MonoBehaviour
     }
     private IEnumerator WaitAndQuit(int idx)
     {
-        OnDebuffSelected?.Invoke();
+        _canvas.ShowGameplay();
         yield return new WaitForSecondsRealtime(destroyTime);
-        windowParent.SetActive(false);
         GameController.Instance.ApplyPerk(idx);
         destroying = false;
     }
