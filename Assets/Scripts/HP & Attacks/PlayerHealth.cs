@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : Health
 {
+    [HideInInspector] public float DamageModifier = 1;
     private void Awake()
     {
         OnDeath.AddListener(GameController.Instance.GameOver);
@@ -15,7 +16,7 @@ public class PlayerHealth : Health
     public override void TakeDamage(float damage)
     {
         //Debug.Log($"получил {damage} пиздов, осталось: {health}");
-        health -= damage;
+        health -= damage * DamageModifier;
         if (health <= 0)
         {
             OnDeath?.Invoke();

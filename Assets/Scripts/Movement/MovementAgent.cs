@@ -46,6 +46,6 @@ public class MovementAgent : MonoBehaviour, ISpeedDebuffable
 
     public void DebuffSpeed(float modifier)
     {
-        _speed *= modifier;
+        _speed = _speed * (1 - modifier);
     }
 }

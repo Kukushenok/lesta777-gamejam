@@ -7,6 +7,7 @@ using UnityEngine.InputSystem.LowLevel;
 [RequireComponent(typeof(Attacker))]
 public abstract class AttackerBrain : MonoBehaviour
 {
+    public float AttackDamageModifier = 1;
     [SerializeField] protected List<AttackParameters> availableAttacks;
     [SerializeField] protected Vector2 offset;
     protected Attacker _attacker;
@@ -19,7 +20,7 @@ public abstract class AttackerBrain : MonoBehaviour
     public void Attack(int id, Vector2 direction)
     {
         AttackParameters parameters = availableAttacks.Find(attack => attack.id == id);
-        _attacker.Attack(id, direction, parameters.damage, parameters.speed, parameters.expirationTime, offset);
+        _attacker.Attack(id, direction, parameters.damage * AttackDamageModifier, parameters.speed, parameters.expirationTime, offset);
     }
 }
 

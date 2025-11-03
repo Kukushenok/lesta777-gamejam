@@ -54,7 +54,14 @@ public class GameController : Singleton<GameController>
     private ProgressData lastSavedProgressData;
     public GameState State { get; private set; } = GameState.MainMenu;
     public IDebuff SpawnDebuff => progressData.debuffFetcher;
-
+    public static bool IsGameplay
+    {
+        get
+        {
+            if (Instance == null) return true;
+            return Instance.State == GameState.Gameplay;
+        }
+    }
     private void Start()
     {
         StartCoroutine(timeAnimator.Cycle());
