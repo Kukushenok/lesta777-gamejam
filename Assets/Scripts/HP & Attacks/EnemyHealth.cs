@@ -10,6 +10,8 @@ public class EnemyHealth : Health
         OnDeath.AddListener(delegate { _expChannel.XpAdditionTrigger(_xp); });
     }
 
+    public void SetXp(float xp) => _xp = xp;
+
     public override void Heal(float hp)
     {
         throw new System.NotImplementedException();
