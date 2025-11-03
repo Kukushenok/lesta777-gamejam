@@ -346,11 +346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: _waves.Array.data[2].enemyCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: _waves.Array.data[3].enemyCount
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: AllEnemiesDead.m_PersistentCalls.m_Calls.Array.size
