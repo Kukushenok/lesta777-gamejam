@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16aae83c5050ffa4081f8fac0444cf38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementBrain
-  _detectionRadius: 5
+  _detectionRadius: 1000
   _detectionMemory: 1
   _attackRadius: 2
 --- !u!114 &5547313697896813964

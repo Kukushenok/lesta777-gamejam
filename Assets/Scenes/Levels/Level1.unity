@@ -8359,7 +8359,7 @@ PrefabInstance:
       objectReference: {fileID: 1389307281}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: _waves.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: _spawnScreenOffset
@@ -8371,11 +8371,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: _waves.Array.data[1].enemyID
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: _waves.Array.data[1].onRight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
+      propertyPath: _waves.Array.data[2].enemyID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
+      propertyPath: _waves.Array.data[2].onRight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
+      propertyPath: _waves.Array.data[3].enemyID
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: _waves.Array.data[0].waveDelay
@@ -8386,12 +8398,28 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
+      propertyPath: _waves.Array.data[2].waveDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
+      propertyPath: _waves.Array.data[3].waveDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: _waves.Array.data[0].enemyCount
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: _waves.Array.data[1].enemyCount
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
+      propertyPath: _waves.Array.data[2].enemyCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
+      propertyPath: _waves.Array.data[3].enemyCount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2131301390928406040, guid: 9c79390ed816d4d40a40bbe777e9e454, type: 3}
       propertyPath: AllEnemiesDead.m_PersistentCalls.m_Calls.Array.size

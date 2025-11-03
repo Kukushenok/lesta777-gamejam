@@ -109,8 +109,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6942505379809170988, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
+      propertyPath: _attackRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942505379809170988, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
       propertyPath: _detectionRadius
-      value: 8
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7792666848737868541, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
       propertyPath: m_LocalScale.x
