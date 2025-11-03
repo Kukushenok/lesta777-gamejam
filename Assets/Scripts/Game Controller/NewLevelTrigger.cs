@@ -1,8 +1,11 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NewLevelTrigger : MonoBehaviour
 {
     [SerializeField] EnemyManager _enemyManager;
+    [SerializeField] private UnityEvent OnCanAdvance;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -10,5 +13,11 @@ public class NewLevelTrigger : MonoBehaviour
         {
             GameController.Instance.Advance();
         }
+    }
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => _enemyManager.allEnemiesDead);
+        OnCanAdvance?.Invoke();
     }
 }
