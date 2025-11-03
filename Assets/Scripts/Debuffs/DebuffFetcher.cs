@@ -3,40 +3,60 @@ using UnityEngine;
 
 public class DebuffFetcher: IDebuff
 {
-    private List<DebuffSO> _lastedDebuffs = new List<DebuffSO>();
-    private List<DebuffSO> _appliedDebuffs = new List<DebuffSO>();
-    public DebuffFetcher(List<DebuffSO> debuffs)
+    private List<DebuffSO> _appliedDebuffs = new();
+    private List<DebuffStages> _lastedDebuffs = new();
+
+    public DebuffFetcher(List<DebuffStagesSO> debuffs)
     {
-        _lastedDebuffs = debuffs;
-    } 
-    private DebuffFetcher(List<DebuffSO> lasted, List<DebuffSO> applied)
+        // is there any better way to do this
+        foreach (var x in debuffs)
+            _lastedDebuffs.Add(x.GetDebuffStages());
+    }
+
+    private DebuffFetcher(List<DebuffStages> lasted, List<DebuffSO> applied)
     {
         _lastedDebuffs = lasted;
         _appliedDebuffs = applied;
     }
+
     public void ApplyDebuff(GameObject player)
     {
-        foreach(var x  in _appliedDebuffs)
+        foreach (var x in _appliedDebuffs)
         {
             x.ApplyDebuff(player);
         }
     }
+
     public List<DebuffSO> GetDebuffs(int n = 3)
     {
-        List<DebuffSO> copy = new List<DebuffSO>(_lastedDebuffs);
-        List<DebuffSO> result = new List<DebuffSO>();
-        for(int i = 0; i < n && copy.Count > 0; i++)
+        List<DebuffStages> copy = new(_lastedDebuffs);
+        List<DebuffSO> result = new();
+
+        for (int i = 0; i < n && copy.Count > 0; i++)
         {
             int rnd = Random.Range(0, copy.Count);
-            result.Add(copy[rnd]);
+            result.Add(copy[rnd].GetDebuff());
             copy.RemoveAt(rnd);
         }
+
         return result;
     }
+
     public void OnDebuffSelected(DebuffSO debuff)
     {
-        _lastedDebuffs.Remove(debuff); // todo maybe check if it is not in _lastedDebuffs
-        _appliedDebuffs.Add(debuff);
+
+        foreach (var x in _lastedDebuffs)
+        {
+            if (x.RemoveDebuff(debuff))
+            {
+                _appliedDebuffs.Add(debuff);
+                if (x.IsEmpty()) _lastedDebuffs.Remove(x);
+                return;
+            }
+        }
+
+        throw new System.Exception("No such debuff");
     }
-    public DebuffFetcher Clone() => new DebuffFetcher(new List<DebuffSO>(_lastedDebuffs), new List<DebuffSO>(_appliedDebuffs));
+
+    public DebuffFetcher Clone() => new DebuffFetcher(new List<DebuffStages>(_lastedDebuffs), new List<DebuffSO>(_appliedDebuffs));
 }

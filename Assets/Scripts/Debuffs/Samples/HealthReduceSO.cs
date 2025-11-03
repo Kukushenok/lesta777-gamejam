@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "HealthReduceDebuff", menuName = "Scriptable Objects/Debuffs/Health Reduce")]
-public class HealthReduceDebuffSO : DebuffSO
+public class HealthReduceSO : DebuffSO
 {
     [SerializeField] private float damage;
     public override void ApplyDebuff(GameObject player)
