@@ -15,8 +15,6 @@ MonoBehaviour:
   <Name>k__BackingField: "\u0421\u043E\u043A\u0440\u0430\u0449\u0435\u043D\u0438\u0435
     \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438 \u0430\u0442\u0430\u043A\u0438
     \u043C\u0435\u0447\u043E\u043C"
-  <Description>k__BackingField: "\u0421\u043E\u043A\u0440\u0430\u0449\u0435\u043D\u0438\u0435
-    \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438 \u0430\u0442\u0430\u043A\u0438
-    \u043C\u0435\u0447\u043E\u043C"
+  <Description>k__BackingField: -25%
   <Sprite>k__BackingField: {fileID: -4094147417031743848, guid: 819306a80e7203c45a7d98354954ac43, type: 3}
-  _modifier: 0.5
+  _modifier: 0.25

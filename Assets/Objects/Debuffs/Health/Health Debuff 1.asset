@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthReduceDebuffSO
   <Name>k__BackingField: "\u0421\u043E\u043A\u0440\u0430\u0449\u0435\u043D\u0438\u0435
     \u043C\u0430\u043A\u0441. \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F"
-  <Description>k__BackingField: "\u0421\u043E\u043A\u0440\u0430\u0449\u0435\u043D\u0438\u0435
-    \u043C\u0430\u043A\u0441. \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F"
+  <Description>k__BackingField: -25%
   <Sprite>k__BackingField: {fileID: -4875392573466180024, guid: 819306a80e7203c45a7d98354954ac43, type: 3}
-  damage: 2
+  damage: 75

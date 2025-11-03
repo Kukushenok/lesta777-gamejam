@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9494c6eb346b24644aa125c3440ab1e4, type: 3}
   m_Name: SpeedDebuff2
   m_EditorClassIdentifier: Assembly-CSharp::SpeedDebuffSO
-  <Name>k__BackingField: "\u0421\u041A\u041E\u0420\u041E\u0421\u0422\u042C \u041C\u0418\u041D\u0423\u0421
-    2"
-  <Description>k__BackingField: "\u0421\u041A\u041E\u0420\u041E\u0421\u0422\u042C
-    \u041C\u0418\u041D\u0423\u0421 2"
+  <Name>k__BackingField: "\u0421\u043E\u043A\u0440\u0430\u0449\u0435\u043D\u0438\u0435
+    \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438 \u043F\u0435\u0440\u0435\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u044F"
+  <Description>k__BackingField: "\u0421\u043E\u043A\u0440\u0430\u0449\u0435\u043D\u0438\u0435
+    \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438 \u043F\u0435\u0440\u0435\u0434\u0432\u0438\u0436\u0435\u043D\u0438\u044F"
   <Sprite>k__BackingField: {fileID: -8009966166165311538, guid: 819306a80e7203c45a7d98354954ac43, type: 3}
   modifier: 0.8
