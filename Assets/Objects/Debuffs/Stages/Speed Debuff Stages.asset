@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3419f0696a2b53544bca2d3630569e28, type: 3}
-  m_Name: DebuffStages
+  m_Name: Speed Debuff Stages
   m_EditorClassIdentifier: Assembly-CSharp::DebuffStagesSO
   _debuffs:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 93da77aff91154147b4ec6202aded099, type: 2}
+  - {fileID: 11400000, guid: da7e429cf2bf6c74f811710e30e3e291, type: 2}

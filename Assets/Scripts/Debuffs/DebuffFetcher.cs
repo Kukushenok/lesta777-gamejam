@@ -3,15 +3,17 @@ using UnityEngine;
 
 public class DebuffFetcher: IDebuff
 {
-    private List<DebuffStagesSO> _lastedDebuffs = new List<DebuffStagesSO>();
-    private List<DebuffSO> _appliedDebuffs = new List<DebuffSO>();
+    private List<DebuffSO> _appliedDebuffs = new();
+    private List<DebuffStages> _lastedDebuffs = new();
 
     public DebuffFetcher(List<DebuffStagesSO> debuffs)
     {
-        _lastedDebuffs = debuffs;
+        // is there any better way to do this
+        foreach (var x in debuffs)
+            _lastedDebuffs.Add(x.GetDebuffStages());
     }
 
-    private DebuffFetcher(List<DebuffStagesSO> lasted, List<DebuffSO> applied)
+    private DebuffFetcher(List<DebuffStages> lasted, List<DebuffSO> applied)
     {
         _lastedDebuffs = lasted;
         _appliedDebuffs = applied;
@@ -27,8 +29,8 @@ public class DebuffFetcher: IDebuff
 
     public List<DebuffSO> GetDebuffs(int n = 3)
     {
-        List<DebuffStagesSO> copy = new List<DebuffStagesSO>(_lastedDebuffs);
-        List<DebuffSO> result = new List<DebuffSO>();
+        List<DebuffStages> copy = new(_lastedDebuffs);
+        List<DebuffSO> result = new();
 
         for (int i = 0; i < n && copy.Count > 0; i++)
         {
@@ -42,6 +44,7 @@ public class DebuffFetcher: IDebuff
 
     public void OnDebuffSelected(DebuffSO debuff)
     {
+
         foreach (var x in _lastedDebuffs)
         {
             if (x.RemoveDebuff(debuff))
@@ -55,5 +58,5 @@ public class DebuffFetcher: IDebuff
         throw new System.Exception("No such debuff");
     }
 
-    public DebuffFetcher Clone() => new DebuffFetcher(new List<DebuffStagesSO>(_lastedDebuffs), new List<DebuffSO>(_appliedDebuffs));
+    public DebuffFetcher Clone() => new DebuffFetcher(new List<DebuffStages>(_lastedDebuffs), new List<DebuffSO>(_appliedDebuffs));
 }

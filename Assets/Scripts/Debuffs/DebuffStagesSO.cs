@@ -6,9 +6,5 @@ public class DebuffStagesSO : ScriptableObject
 {
     [SerializeField] private List<DebuffSO> _debuffs;
 
-    public DebuffSO GetDebuff() => _debuffs[0];
-
-    public bool RemoveDebuff(DebuffSO debuff) => _debuffs.Remove(debuff);
-
-    public bool IsEmpty() => _debuffs.Count == 0;
+    public DebuffStages GetDebuffStages() => new DebuffStages(new List<DebuffSO>(_debuffs));
 }
