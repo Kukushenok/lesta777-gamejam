@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 3929013648840314911, guid: 2163d9069e6c7ba4f9360b2d3d81a797, type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 4322268687576432198}
+      objectReference: {fileID: 0}
     - target: {fileID: 3929013648840314911, guid: 2163d9069e6c7ba4f9360b2d3d81a797, type: 3}
       propertyPath: attackCooldown
       value: 0.4
@@ -301,8 +301,3 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f41aa89e93e8542438390862c8f813b5, type: 3}
   footstepCooldown: 0.4
   attackCooldown: 0.4
---- !u!95 &4322268687576432198 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7146375938539693318, guid: 2163d9069e6c7ba4f9360b2d3d81a797, type: 3}
-  m_PrefabInstance: {fileID: 6401532021818514240}
-  m_PrefabAsset: {fileID: 0}
