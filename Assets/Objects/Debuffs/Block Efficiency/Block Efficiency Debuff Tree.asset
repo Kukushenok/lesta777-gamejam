@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Block Efficiency Debuff Tree
   m_EditorClassIdentifier: Assembly-CSharp::DebuffStagesSO
   _debuffs:
-  - {fileID: 11400000, guid: 93da77aff91154147b4ec6202aded099, type: 2}
-  - {fileID: 11400000, guid: da7e429cf2bf6c74f811710e30e3e291, type: 2}
-  - {fileID: 11400000, guid: 4b4a5fb9ddd949d4eb1675bab5cb94f5, type: 2}
+  - {fileID: 11400000, guid: 7fcac104c7103bf4ebd877b77f30ad28, type: 2}
+  - {fileID: 11400000, guid: 901e785f1d865d143b649a005072b007, type: 2}
+  - {fileID: 11400000, guid: 2ddfb3998b41b3445823ad83606a82a4, type: 2}
