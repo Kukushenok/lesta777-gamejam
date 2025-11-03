@@ -16,8 +16,8 @@ public class NewLevelTrigger : MonoBehaviour
     }
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => _enemyManager.allEnemiesDead);
+        yield return new WaitForSeconds(1);
         OnCanAdvance?.Invoke();
     }
 }
