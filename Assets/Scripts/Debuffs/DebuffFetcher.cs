@@ -39,12 +39,8 @@ public class DebuffFetcher: IDebuff
 
         for (int i = 0; i < n && copy.Count > 0; i++)
         {
-            
-
             int rnd = Random.Range(0, copy.Count);
             var debuffStage = copy[rnd];
-
-            //Debug.Log(rnd + " " + debuffStage.GetDebuff().Name);
 
             result.Add(debuffStage.GetDebuff());
             copy.RemoveAt(rnd);
