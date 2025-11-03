@@ -7146,6 +7146,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'GamplayCanvas [IMPORTANT]'
       objectReference: {fileID: 0}
+    - target: {fileID: 4886505787909382247, guid: a1a2232e9fd3be94db01992875ffab12, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 43.906
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886505787909382247, guid: a1a2232e9fd3be94db01992875ffab12, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 38.734
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
