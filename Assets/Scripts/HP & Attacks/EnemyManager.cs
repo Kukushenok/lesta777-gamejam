@@ -14,6 +14,9 @@ public class EnemyManager : MonoBehaviour
     private bool _isSpawnTime;
     private bool _allEnemiesSpawned;
     private int _spawnedEnemies;
+    private bool _allEnemiesDead;
+
+    public bool allEnemiesDead { get => _allEnemiesDead; }
 
     [SerializeField] private float _spawnScreenOffset;
     [SerializeField] private Transform _borderUpper;
@@ -25,6 +28,7 @@ public class EnemyManager : MonoBehaviour
 
     private void Awake()
     {
+        _allEnemiesDead = false;
         _camera = Camera.main;
         _playerTarget = FindFirstObjectByType<PlayerMovementBrain>().transform;
         StartCoroutine(GoThroughWaves());
@@ -39,9 +43,10 @@ public class EnemyManager : MonoBehaviour
             _isSpawnTime = true;
         }
 
-        if (_allEnemiesSpawned&&_spawnedEnemies <= 0)
+        if (_allEnemiesSpawned&&_spawnedEnemies <= 0&&!_allEnemiesDead)
         {
             AllEnemiesDead?.Invoke();
+            _allEnemiesDead = true;
         }
     }
 
@@ -77,7 +82,7 @@ public class EnemyManager : MonoBehaviour
             }
             else
             {
-                var x = GetPointInWorld(0).x + _spawnScreenOffset;
+                var x = GetPointInWorld(0).x - _spawnScreenOffset;
                 enemyPos = new Vector3(x, y, 0);
             }
             enemyObject.transform.position = enemyPos;

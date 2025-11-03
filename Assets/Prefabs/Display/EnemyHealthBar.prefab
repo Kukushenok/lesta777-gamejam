@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6336090131698819469}
-  - component: {fileID: 7191469863185711896}
   m_Layer: 5
   m_Name: EnemyHealthBar
   m_TagString: Untagged
@@ -37,20 +36,6 @@ RectTransform:
   m_AnchoredPosition: {x: -221.00002, y: 9.299978}
   m_SizeDelta: {x: 213.69803, y: 19.343185}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7191469863185711896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2147169564852766410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 234c4c6f1897c784a9d5bdf4fcf56160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthUIDisplay
-  hp: {fileID: 0}
-  healthDisplay: {fileID: 59323871893737065}
 --- !u!1 &2552193803042317678
 GameObject:
   m_ObjectHideFlags: 0
