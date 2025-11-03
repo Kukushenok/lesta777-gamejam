@@ -32,10 +32,21 @@ public class DebuffFetcher: IDebuff
         List<DebuffStages> copy = new(_lastedDebuffs);
         List<DebuffSO> result = new();
 
+        for (int i = 0; i < copy.Count; i++)
+        {
+            Debug.Log(copy[i].GetDebuff().Name);
+        }
+
         for (int i = 0; i < n && copy.Count > 0; i++)
         {
+            
+
             int rnd = Random.Range(0, copy.Count);
-            result.Add(copy[rnd].GetDebuff());
+            var debuffStage = copy[rnd];
+
+            //Debug.Log(rnd + " " + debuffStage.GetDebuff().Name);
+
+            result.Add(debuffStage.GetDebuff());
             copy.RemoveAt(rnd);
         }
 
@@ -44,7 +55,6 @@ public class DebuffFetcher: IDebuff
 
     public void OnDebuffSelected(DebuffSO debuff)
     {
-
         foreach (var x in _lastedDebuffs)
         {
             if (x.RemoveDebuff(debuff))

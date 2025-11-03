@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Attack Speed Debuff Tree
   m_EditorClassIdentifier: Assembly-CSharp::DebuffStagesSO
   _debuffs:
-  - {fileID: 11400000, guid: 3cc52468ad908ee4899d0117d60549db, type: 2}
-  - {fileID: 11400000, guid: c98ead5cc91e12b429136e6e1e570081, type: 2}
-  - {fileID: 11400000, guid: 957b89a5f77936a448e247372930c67e, type: 2}
+  - {fileID: 11400000, guid: 369f28d13762fbe46881b94d0958ddb2, type: 2}
+  - {fileID: 11400000, guid: 7e259f93860a213498a7427e7fdd6d12, type: 2}
+  - {fileID: 11400000, guid: 694fa3cfdacf97246b10e645979a6be4, type: 2}
