@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Block Delay Debuff Tree
   m_EditorClassIdentifier: Assembly-CSharp::DebuffStagesSO
   _debuffs:
-  - {fileID: 11400000, guid: 8ddc6f58bf60ec148b67a74adbfa625f, type: 2}
-  - {fileID: 11400000, guid: 545c7aa852f30df42aec98683d604dba, type: 2}
-  - {fileID: 11400000, guid: 86b1071866efe0c4fb7d5cbd5da878bb, type: 2}
+  - {fileID: 11400000, guid: 3cc4015050e89c146bc1384fa3fd62c0, type: 2}
+  - {fileID: 11400000, guid: bbbb850521de8c345818298457ada0fc, type: 2}
+  - {fileID: 11400000, guid: c8bc07aae25256347b1292826d2023fb, type: 2}
