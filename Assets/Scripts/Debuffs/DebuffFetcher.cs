@@ -32,11 +32,6 @@ public class DebuffFetcher: IDebuff
         List<DebuffStages> copy = new(_lastedDebuffs);
         List<DebuffSO> result = new();
 
-        for (int i = 0; i < copy.Count; i++)
-        {
-            Debug.Log(copy[i].GetDebuff().Name);
-        }
-
         for (int i = 0; i < n && copy.Count > 0; i++)
         {
             int rnd = Random.Range(0, copy.Count);
