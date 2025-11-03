@@ -35,7 +35,9 @@ public class DebuffFetcher: IDebuff
         for (int i = 0; i < n && copy.Count > 0; i++)
         {
             int rnd = Random.Range(0, copy.Count);
-            result.Add(copy[rnd].GetDebuff());
+            var debuffStage = copy[rnd];
+
+            result.Add(debuffStage.GetDebuff());
             copy.RemoveAt(rnd);
         }
 
@@ -44,7 +46,6 @@ public class DebuffFetcher: IDebuff
 
     public void OnDebuffSelected(DebuffSO debuff)
     {
-
         foreach (var x in _lastedDebuffs)
         {
             if (x.RemoveDebuff(debuff))

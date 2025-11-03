@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 40c135e396f39d7458e933db260d3c0e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9023098544758735232
+    second: T_TreeAlpha_02_0
+  - first:
+      213: -1119902931821015183
+    second: T_TreeAlpha_02_1
+  - first:
+      213: -8159091942452916818
+    second: T_TreeAlpha_02_2
+  - first:
+      213: -6404076895035053501
+    second: T_TreeAlpha_02_3
+  - first:
+      213: 3023431871779072445
+    second: T_TreeAlpha_02_4
+  - first:
+      213: -5224754403336657361
+    second: T_TreeAlpha_02_5
+  - first:
+      213: 2192711011238192107
+    second: T_TreeAlpha_02_6
+  - first:
+      213: 5773496298914363058
+    second: T_TreeAlpha_02_7
+  - first:
+      213: -7457056910501362627
+    second: T_TreeAlpha_02_8
+  - first:
+      213: -4387389301290964508
+    second: T_TreeAlpha_02_9
+  - first:
+      213: 1630441697381865173
+    second: T_TreeAlpha_02_10
+  - first:
+      213: -8078061779837214273
+    second: T_TreeAlpha_02_11
+  - first:
+      213: 2058307915483807454
+    second: T_TreeAlpha_02_12
+  - first:
+      213: -6416075502763817568
+    second: T_TreeAlpha_02_13
+  - first:
+      213: -8118331692351225863
+    second: T_TreeAlpha_02_14
+  - first:
+      213: 56414919815409997
+    second: T_TreeAlpha_02_15
+  - first:
+      213: 2412980460019942318
+    second: T_TreeAlpha_02_16
+  - first:
+      213: 4201826548326368765
+    second: T_TreeAlpha_02_17
+  - first:
+      213: -2510074316636853585
+    second: T_TreeAlpha_02_18
+  - first:
+      213: 43906983045718905
+    second: T_TreeAlpha_02_19
+  - first:
+      213: 3410074294233340051
+    second: T_TreeAlpha_02_20
+  - first:
+      213: 3805894224391435200
+    second: T_TreeAlpha_02_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 409
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ebf421ea387c280800000000000000
+      internalID: -9023098544758735232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 443
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17fc3ed873e4570f0800000000000000
+      internalID: -1119902931821015183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 416
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ead87586b1515ce80800000000000000
+      internalID: -8159091942452916818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_3
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 438
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a26258ef52027a0800000000000000
+      internalID: -6404076895035053501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_4
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 411
+        width: 67
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db96cffb44365f920800000000000000
+      internalID: 3023431871779072445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_5
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 400
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f26e5765d81fd77b0800000000000000
+      internalID: -5224754403336657361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 326
+        width: 63
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3a0f71c031e6e10800000000000000
+      internalID: 2192711011238192107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_7
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 379
+        width: 59
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b6b2d86b449f1050800000000000000
+      internalID: 5773496298914363058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_8
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 304
+        width: 123
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d34c1b3cf36338890800000000000000
+      internalID: -7457056910501362627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_9
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 371
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e9e3350dacdc13c0800000000000000
+      internalID: -4387389301290964508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_10
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 400
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d65e67d51e70a610800000000000000
+      internalID: 1630441697381865173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_11
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 54
+        width: 242
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1a4235c95f4ef80800000000000000
+      internalID: -8078061779837214273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_12
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 90
+        width: 153
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede79ccc424909c10800000000000000
+      internalID: 2058307915483807454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_13
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 304
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a54da5f25585f6a0800000000000000
+      internalID: -6416075502763817568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_14
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 326
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fffb9ca654e55f80800000000000000
+      internalID: -8118331692351225863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_15
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 264
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4131a7121d68c000800000000000000
+      internalID: 56414919815409997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_16
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 230
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea38271a1f0ac7120800000000000000
+      internalID: 2412980460019942318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_17
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 176
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df58cc4cbf2ef4a30800000000000000
+      internalID: 4201826548326368765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_18
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 184
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa670d35bc6a2dd0800000000000000
+      internalID: -2510074316636853585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_19
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 52
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 973699f1b2dfb9000800000000000000
+      internalID: 43906983045718905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_20
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 61
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3981875d084035f20800000000000000
+      internalID: 3410074294233340051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_TreeAlpha_02_21
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 55
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c3ff81f1a041d430800000000000000
+      internalID: 3805894224391435200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      T_TreeAlpha_02_0: -9023098544758735232
+      T_TreeAlpha_02_1: -1119902931821015183
+      T_TreeAlpha_02_10: 1630441697381865173
+      T_TreeAlpha_02_11: -8078061779837214273
+      T_TreeAlpha_02_12: 2058307915483807454
+      T_TreeAlpha_02_13: -6416075502763817568
+      T_TreeAlpha_02_14: -8118331692351225863
+      T_TreeAlpha_02_15: 56414919815409997
+      T_TreeAlpha_02_16: 2412980460019942318
+      T_TreeAlpha_02_17: 4201826548326368765
+      T_TreeAlpha_02_18: -2510074316636853585
+      T_TreeAlpha_02_19: 43906983045718905
+      T_TreeAlpha_02_2: -8159091942452916818
+      T_TreeAlpha_02_20: 3410074294233340051
+      T_TreeAlpha_02_21: 3805894224391435200
+      T_TreeAlpha_02_3: -6404076895035053501
+      T_TreeAlpha_02_4: 3023431871779072445
+      T_TreeAlpha_02_5: -5224754403336657361
+      T_TreeAlpha_02_6: 2192711011238192107
+      T_TreeAlpha_02_7: 5773496298914363058
+      T_TreeAlpha_02_8: -7457056910501362627
+      T_TreeAlpha_02_9: -4387389301290964508
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
