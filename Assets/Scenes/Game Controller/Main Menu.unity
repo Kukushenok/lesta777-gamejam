@@ -6551,7 +6551,7 @@ MonoBehaviour:
   <LevelCount>k__BackingField: 2
   mainMenuIndex: 0
   levelStartIndex: 1
-  resultsIndex: 2
+  resultsIndex: 3
 --- !u!1 &6269048990868982840
 GameObject:
   m_ObjectHideFlags: 0

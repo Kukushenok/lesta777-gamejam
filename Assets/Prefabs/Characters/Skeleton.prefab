@@ -136,6 +136,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.14
       objectReference: {fileID: 0}
+    - target: {fileID: 8209941802751826037, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
+      propertyPath: availableAttacks.Array.data[0].damage
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

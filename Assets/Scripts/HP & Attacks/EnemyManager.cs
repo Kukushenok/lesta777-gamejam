@@ -21,6 +21,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float _spawnScreenOffset;
     [SerializeField] private Transform _borderUpper;
     [SerializeField] private Transform _borderLower;
+    private Vector2 xRange;
     [SerializeField] private List<WaveConfig> _waves;
     [SerializeField] private UnityEvent AllEnemiesDead;
     [SerializeField] private List<GameObject> _enemyPrefabs;
@@ -32,8 +33,22 @@ public class EnemyManager : MonoBehaviour
         _camera = Camera.main;
         _playerTarget = FindFirstObjectByType<PlayerMovementBrain>().transform;
         StartCoroutine(GoThroughWaves());
+        GetXRange();
     }
-
+    private void GetXRange()
+    {
+        foreach(Transform t in _borderLower.parent)
+        {
+            if(t.name == "Left")
+            {
+                xRange.x = t.position.x;
+            } else if(t.name == "Right")
+            {
+                xRange.y = t.position.x;
+            }
+        }
+        Debug.Log($"Shitposted {xRange}");
+    }
     private void Update()
     {
         _spawnTime -= Time.deltaTime;
@@ -102,7 +117,10 @@ public class EnemyManager : MonoBehaviour
     private Vector3 GetPointInWorld(int screenPos)
     {
         Vector3 cameraDistance = _playerTarget.position - _camera.transform.position;
-        return _camera.ScreenToWorldPoint(new Vector3(screenPos, 0, cameraDistance.z));        
+        Vector3 wrld = _camera.ScreenToWorldPoint(new Vector3(screenPos, 0, cameraDistance.z));
+        if (wrld.x < xRange.x) wrld.x = xRange.x;
+        else if (wrld.x > xRange.y) wrld.x = xRange.y;
+        return wrld;
     }
 }
 [Serializable]
