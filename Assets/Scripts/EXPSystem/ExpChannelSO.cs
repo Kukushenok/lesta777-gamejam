@@ -2,17 +2,16 @@ using System.Xml.XPath;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "ExpChannelSO", menuName = "Scriptable Objects/ExpChannelSO")]
-public class ExpChannelSO : ScriptableObject
+public class ExpChannelSO 
 {
-    private UnityEvent<float> _xpAdditionEvent;
+    public static UnityEvent<float> _xpAdditionEvent = new UnityEvent<float>();
 
-    public void AddListener(UnityAction<float> action)
+    public static void AddListener(UnityAction<float> action)
     {
         _xpAdditionEvent.AddListener(action);
     }
 
-    public void XpAdditionTrigger(float xp)
+    public static void XpAdditionTrigger(float xp)
     {
         _xpAdditionEvent?.Invoke(xp);
     }

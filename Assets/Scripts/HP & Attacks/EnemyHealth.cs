@@ -3,11 +3,10 @@ using UnityEngine;
 public class EnemyHealth : Health
 {
     [SerializeField] float _xp;
-    [SerializeField] ExpChannelSO _expChannel;
 
     private void Awake()
     {
-        OnDeath.AddListener(delegate { _expChannel.XpAdditionTrigger(_xp); });
+        OnDeath.AddListener(delegate { ExpChannelSO.XpAdditionTrigger(_xp); });
     }
 
     public void SetXp(float xp) => _xp = xp;

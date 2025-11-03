@@ -3,7 +3,6 @@ using UnityEngine.Events;
 
 public class PlayerExperience : MonoBehaviour
 {
-    [SerializeField] ExpChannelSO _xpChannel;
     [SerializeField] public float xp;
     [SerializeField] public float xpMax;
     UnityAction<float> _xpAddAction;
@@ -11,7 +10,7 @@ public class PlayerExperience : MonoBehaviour
     private void Awake()
     {
         _xpAddAction = AddXP;
-        _xpChannel.AddListener(_xpAddAction);
+        ExpChannelSO.AddListener(_xpAddAction);
     }
 
     public void AddXP(float xpValue) 

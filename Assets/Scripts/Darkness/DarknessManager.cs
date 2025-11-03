@@ -12,13 +12,12 @@ public class DarknessManager : Singleton<DarknessManager>
     }
 
     [SerializeField] private float _darknessLevel;
-    [SerializeField] private ExpChannelSO expChannelSO;
     private float lastDarknessSaved;
     float _darkness;
 
     private void Start()
     {
-        if(expChannelSO != null) expChannelSO.AddListener(AddDarkness);
+        ExpChannelSO.AddListener(AddDarkness);
     }
     private void DarknessLimit()
     {
