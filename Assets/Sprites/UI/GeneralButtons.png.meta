@@ -150,7 +150,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GeneralButtons_B
+      name: GeneralButtons_A1
       rect:
         serializedVersion: 2
         x: 0
@@ -361,9 +361,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      1: 3985955030616620218
+      GeneralButtons_A1: 3985955030616620218
       GeneralButtons_A2: -465158244871805167
       GeneralButtons_A3: -5054562304347051673
-      GeneralButtons_B: 3985955030616620218
       GeneralButtons_B1: -3882150288552018287
       GeneralButtons_B2: -4462926804550443489
       GeneralButtons_B3: 6916111957027086762
