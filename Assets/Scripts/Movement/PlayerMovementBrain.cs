@@ -11,6 +11,7 @@ public class PlayerMovementBrain : MovementBrain
     }
     public override Vector2 GetMoveVector()
     {
-        return _moveAction.ReadValue<Vector2>();
+        var value = _moveAction.ReadValue<Vector2>();
+        return value;
     }
 }

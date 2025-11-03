@@ -51,7 +51,7 @@ public abstract class AttackObject : MonoBehaviour
         }
     }
 
-    public abstract void Attack(Vector2 direction, float damage, float speed, float time);
+    public abstract void Attack(Vector2 direction, float damage, float speed, float time, Vector3 offset);
 
     internal abstract IEnumerator Move();
 }

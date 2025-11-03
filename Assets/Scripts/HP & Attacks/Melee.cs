@@ -6,7 +6,7 @@ public class Melee : AttackObject
 {
     [SerializeField] float maximumAngle;
 
-    public override void Attack(Vector2 dir, float dmg, float spd, float time)
+    public override void Attack(Vector2 dir, float dmg, float spd, float time, Vector3 offset)
     {
         direction = dir;
         var angleOfAttack = Vector3.Angle(new Vector3(1, 0, 0), direction);
@@ -18,15 +18,7 @@ public class Melee : AttackObject
 
         if (direction.y < 0) angleOfAttack *= -1; 
 
-        SpriteRenderer spriteRenderer = parent.GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null)
-        {
-            spriteRenderer = parent.GetComponentInChildren<SpriteRenderer>();
-        }
-        var bounds = spriteRenderer.bounds.size/2f;
-        var center = spriteRenderer.bounds.center;
-
-        transform.position = center + new Vector3(direction.x * bounds.x, direction.y * bounds.y, 0*bounds.z);
+        transform.position = parent.transform.position + new Vector3(direction.x * offset.x, direction.y * offset.y, 0*offset.z);
         transform.Rotate(0,0,angleOfAttack);
         damage = dmg;
         speed = spd;
