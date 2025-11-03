@@ -3,15 +3,17 @@ using UnityEngine;
 
 public class PauseCanvasManager : Singleton<PauseCanvasManager>
 {
-    [SerializeField] private GameObject _settingsWindow;
-
+    [SerializeField] private BaseUIWindowManager _settingsWindow;
+    [SerializeField] private GameObject _toner;
     public void Pause()
     {
-        _settingsWindow.SetActive(true);
+        _toner.SetActive(true);
+        _settingsWindow.ChangeWindow(1);
     }
 
     public void Resume()
     {
-        _settingsWindow.SetActive(false);
+        _toner.SetActive(false);
+        _settingsWindow.ChangeWindow(0);
     }
 }

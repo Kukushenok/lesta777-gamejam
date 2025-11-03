@@ -15,6 +15,7 @@ public class DebuffManager : MonoBehaviour
     [SerializeField] private GameObject windowParent;
     [SerializeField] private float destroyTime;
     [SerializeField] private UnityEvent OnDebuffSelected;
+    private List<GameObject> choices = new List<GameObject>();
     private bool destroying = false;
 
     //private void Awake()
@@ -24,6 +25,8 @@ public class DebuffManager : MonoBehaviour
 
     public void SetDebuffUI(List<IDebuffDescription> list)
     {
+        foreach (var x in choices) Destroy(x);
+        choices.Clear();
         windowParent.SetActive(true);
         for (int i = 0; i < list.Count; i++)
         {
@@ -34,7 +37,8 @@ public class DebuffManager : MonoBehaviour
             buttonObj.SetActive(true);
             var debuff = list[i];
             var buttonText = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
-            var img = buttonObj.GetComponentInChildren<Image>();
+            // This is unbeliveably hacky PLEASE DO SOMETHING
+            var img = buttonObj.transform.GetChild(0).GetComponent<Image>();
             img.sprite = list[i].Sprite;
             buttonText.text = debuff.Name;
 
@@ -42,6 +46,7 @@ public class DebuffManager : MonoBehaviour
             button.onClick.RemoveAllListeners();
             int closure = i;
             button.onClick.AddListener(() => { SetDebuffButtonValue(closure); });
+            choices.Add(buttonObj);
         }
     }
 
@@ -53,7 +58,9 @@ public class DebuffManager : MonoBehaviour
     }
     private IEnumerator WaitAndQuit(int idx)
     {
+        OnDebuffSelected?.Invoke();
         yield return new WaitForSecondsRealtime(destroyTime);
+        windowParent.SetActive(false);
         GameController.Instance.ApplyPerk(idx);
         destroying = false;
     }
