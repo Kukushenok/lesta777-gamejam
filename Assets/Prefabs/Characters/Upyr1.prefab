@@ -87,6 +87,7 @@ MonoBehaviour:
   health: 20
   _xp: 5
   _expChannel: {fileID: 11400000, guid: e5195a232b7347e4cba2cdbcb06499f1, type: 2}
+  _deathEffectPrefab: {fileID: 2631372867059355793, guid: 29acf43e2368051449e5e55e01636fdf, type: 3}
 --- !u!114 &1373364094055004297
 MonoBehaviour:
   m_ObjectHideFlags: 0

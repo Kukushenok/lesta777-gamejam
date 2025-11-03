@@ -23,7 +23,6 @@ public class EnemyHealth : Health
         if (health <= 0)
         {
             OnDeath?.Invoke();
-            Destroy(gameObject);
         }
     }
 }
