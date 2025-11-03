@@ -8,7 +8,7 @@ using UnityEngine.InputSystem.LowLevel;
 public abstract class AttackerBrain : MonoBehaviour
 {
     [SerializeField] protected List<AttackParameters> availableAttacks;
-    [field: SerializeField] public SpriteRenderer MyRenderer { get; private set; }
+    [SerializeField] protected Vector2 offset;
     protected Attacker _attacker;
 
     private void Awake()
@@ -19,7 +19,7 @@ public abstract class AttackerBrain : MonoBehaviour
     public void Attack(int id, Vector2 direction)
     {
         AttackParameters parameters = availableAttacks.Find(attack => attack.id == id);
-        _attacker.Attack(id, direction, parameters.damage, parameters.speed, parameters.expirationTime);
+        _attacker.Attack(id, direction, parameters.damage, parameters.speed, parameters.expirationTime, offset);
     }
 }
 

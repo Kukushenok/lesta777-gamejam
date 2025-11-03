@@ -10,14 +10,14 @@ public class Attacker : MonoBehaviour
 
     public int attackCount { get =>  attackObjectPrefabs.Count; }
 
-    public void Attack(int attackID, Vector2 direction, float damage, float speed, float time)
+    public void Attack(int attackID, Vector2 direction, float damage, float speed, float time, Vector2 offset)
     {
         if (attackID + 1 <= attackObjectPrefabs.Count)
         {
             AttackObject attack;
             OnAttack?.Invoke();
             attack = Instantiate(attackObjectPrefabs[attackID], this.transform).GetComponent<AttackObject>();
-            attack.Attack(direction, damage, speed, time);
+            attack.Attack(direction, damage, speed, time, offset);
         }
         else throw new Exception("Attack at this ID is not assigned");
     }

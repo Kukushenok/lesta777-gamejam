@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAttackerBrain : AttackerBrain
 {
     [SerializeField] float timeDelay;
+    [SerializeField] private Animator _animator;
     public bool isEnabled;
     bool timerEnded;
     float expirationTime;
@@ -47,6 +48,8 @@ public class EnemyAttackerBrain : AttackerBrain
         {
             if (timerEnded)
             {
+                _animator.SetTrigger("isAttacking");
+                yield return new WaitForSeconds(0.1f);
                 Attack(_id, _direction);
                 timerEnded = false;
                 ResetTimer();

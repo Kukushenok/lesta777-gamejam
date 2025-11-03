@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Projectile : AttackObject
 {
-    public override void Attack(Vector2 dir, float dmg, float spd, float time)
+    public override void Attack(Vector2 dir, float dmg, float spd, float time, Vector3 offset)
     {
-        transform.position = parent.transform.position;
+        transform.position = parent.transform.position + offset;
         direction = dir;
         damage = dmg;
         speed = spd;
