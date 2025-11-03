@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3419f0696a2b53544bca2d3630569e28, type: 3}
+  m_Name: Block Delay Debuff Tree
+  m_EditorClassIdentifier: Assembly-CSharp::DebuffStagesSO
+  _debuffs:
+  - {fileID: 11400000, guid: 8ddc6f58bf60ec148b67a74adbfa625f, type: 2}
+  - {fileID: 11400000, guid: 545c7aa852f30df42aec98683d604dba, type: 2}
+  - {fileID: 11400000, guid: 86b1071866efe0c4fb7d5cbd5da878bb, type: 2}

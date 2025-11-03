@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3419f0696a2b53544bca2d3630569e28, type: 3}
-  m_Name: Damage Debuff Stages
+  m_Name: Block Time Debuff Tree
   m_EditorClassIdentifier: Assembly-CSharp::DebuffStagesSO
   _debuffs:
-  - {fileID: 11400000, guid: 194d3ac9a1f54a64585d7420b815af6b, type: 2}
-  - {fileID: 11400000, guid: 8f215df8c8e37044183d42d647ce797a, type: 2}
+  - {fileID: 11400000, guid: 8ddc6f58bf60ec148b67a74adbfa625f, type: 2}
+  - {fileID: 11400000, guid: 545c7aa852f30df42aec98683d604dba, type: 2}
+  - {fileID: 11400000, guid: 86b1071866efe0c4fb7d5cbd5da878bb, type: 2}
