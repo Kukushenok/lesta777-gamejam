@@ -80,12 +80,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719ca8d30ee4c594fa6857a7f9fc1288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 20
+  maxHealth: 40
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
-  health: 20
-  _xp: 5
+  health: 40
+  _xp: 2
   _expChannel: {fileID: 11400000, guid: e5195a232b7347e4cba2cdbcb06499f1, type: 2}
 --- !u!114 &1373364094055004297
 MonoBehaviour:

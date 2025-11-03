@@ -9,6 +9,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 235274931170821127, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
+      propertyPath: health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 235274931170821127, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 235274931170821127, guid: 7bf3f164f63856542ab2a5e76372ca0a, type: 3}
       propertyPath: _deathEffectPrefab
       value: 
       objectReference: {fileID: 2631372867059355793, guid: 29acf43e2368051449e5e55e01636fdf, type: 3}
