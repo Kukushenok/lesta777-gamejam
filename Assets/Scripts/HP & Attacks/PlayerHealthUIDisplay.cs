@@ -2,7 +2,7 @@
 
 public class PlayerHealthUIDisplay : MonoBehaviour
 {
-    [SerializeField] private ValueDisplay<float> healthDisplay;
+    [SerializeField] private FloatBarDisplay healthDisplay;
     private Health hp;
 
     private void Awake()
@@ -14,7 +14,8 @@ public class PlayerHealthUIDisplay : MonoBehaviour
     {
         if (Mathf.Abs(hp.health - healthDisplay.DisplayValue) > 1e-5)
         {
-            healthDisplay.DisplayValue = hp.health / hp.maxHealth;
+            healthDisplay.SetMaxValue(hp.maxHealth);
+            healthDisplay.DisplayValue = hp.health;
         }
     }
 }
