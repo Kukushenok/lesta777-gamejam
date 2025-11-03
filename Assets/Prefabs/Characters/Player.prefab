@@ -263,8 +263,8 @@ GameObject:
   - component: {fileID: 4711697107034509735}
   - component: {fileID: 7101179464246203579}
   - component: {fileID: 2268270517173655389}
-  - component: {fileID: 7146375938539693318}
   - component: {fileID: 4573338602334504261}
+  - component: {fileID: 7270802227619281445}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -365,6 +365,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   health: 20
+  DamageModifier: 1
 --- !u!114 &5246978707258803741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2ef626d97765447b88c249035e0eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackerBrain
+  AttackDamageModifier: 1
   availableAttacks:
   - id: 0
     damage: 10
@@ -405,8 +407,10 @@ MonoBehaviour:
     speed: 15
     expirationTime: 5
   offset: {x: 0.5, y: 1.25}
+  <AttackCooldown>k__BackingField: 0.4
   _asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _animator: {fileID: 2640519471354810527}
+  shieldBehaviour: {fileID: 7270802227619281445}
 --- !u!114 &7101179464246203579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,6 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720569c4aac5cdc4db74413087ad17d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDebuffManager
+  attaker: {fileID: 4711697107034509735}
 --- !u!70 &2268270517173655389
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -456,28 +461,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.00000058503355, y: -0.09238348}
   m_Size: {x: 0.99723166, y: 0.26248094}
   m_Direction: 1
---- !u!95 &7146375938539693318
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5385838632270755463}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a06a3c631cf681e47829359b97d33d18, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &4573338602334504261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +476,27 @@ MonoBehaviour:
   _xpChannel: {fileID: 11400000, guid: e5195a232b7347e4cba2cdbcb06499f1, type: 2}
   xp: 0
   xpMax: 20
+--- !u!114 &7270802227619281445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385838632270755463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 170bfe4150aea3947aa6791da70a853d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShieldBehaviour
+  _animator: {fileID: 2640519471354810527}
+  _playerHealth: {fileID: 8116211979544854722}
+  _movementBrain: {fileID: 8989942403420494118}
+  _shieldDelay: 0.1
+  _shieldBlockEfficiency: 1
+  _shieldBlockTime: 0.8
+  OnShieldPerform:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8160043253842325735
 GameObject:
   m_ObjectHideFlags: 0
